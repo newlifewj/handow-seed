@@ -1,0 +1,6 @@
+{
+    "name": "handow-seed",
+    "dependencies": {
+        "handow-core": "^0.0.1"
+    }
+}
