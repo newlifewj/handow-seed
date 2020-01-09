@@ -1,6 +1,25 @@
 {
     "name": "handow-seed",
+    "version": "v0.1.0",
+    "description": "Handow UAT project",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/newlifewj/handow-seed.git"
+    },
+    "homepage": "https://github.com/newlifewj/handow-seed",
+    "keywords": ["test", "e2e", "uat", "puppeteer", "javascript", "bdd", "handow", "step", "story", "plan", "stage", "scenario"],
+    "author": "Jian Wang",
+    "license": "MIT",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+
+    "scripts": {
+        "start": "handow ./project/myplan"
+    },
     "dependencies": {
         "handow-core": "^0.0.1"
+    },
+    "devDependencies": {
     }
 }

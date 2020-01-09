@@ -1,0 +1,28 @@
+{
+    "title": "UAT report",
+    "stages": [
+        {
+            "stage": "Test stage-1",
+            "description": "The first stage, outline test and prepare test env",
+            "stories": [ "story1" ]
+        },
+        {
+            "stage": "Test stage-2",
+            "description": "The 2nd stage for testing pubic features",
+            "stories": [ "story2", "story3" ]
+        }
+        {
+            "stage": "Test stage-3",
+            "description": "The 3rd stage for testing secured featured",
+            "stories": [ "story2", "story5", "story4" ]
+        }
+    ],
+    "config": {
+        "consoleOutput": "story",
+        "outputSkipInfo": false,
+        "newIncognitoContext": true,
+        "headlessChromium": true,
+        "workers": 2,
+        "saveJsonReport": true
+    }
+}
