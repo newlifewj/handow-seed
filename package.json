@@ -10,6 +10,6 @@
         "teststory": "node ./project/test.js"
     },
     "dependencies": {
-        "handow": "^0.2.1"
+        "handow": "^0.2.2"
     }
 }
