@@ -1,13 +1,13 @@
 {
-    "name": "test",
+    "name": "handow-seed",
     "version": "0.2.0",
-    "description": "description",
+    "description": "Sample Handow UAT as project seed and demo",
     "author": "Jian",
     "license": "MIT",
-    "main": "index.js",
     "scripts": {
         "demostory": "handow --story project/stories/demostory",
-        "demoplan": "handow --plan project/demoplan"
+        "demoplan": "handow --plan project/demoplan",
+        "teststory": "node ./project/test.js"
     },
     "dependencies": {
         "handow": "^0.2.1"

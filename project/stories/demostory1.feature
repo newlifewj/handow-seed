@@ -15,7 +15,7 @@ When I click it {selector: "Story"}
 And I have seen it {selector: "StoryDetail"} is displayed
 # And I click it {selector: "ExpandStoryParams"}
 Then I can see it {selector: "StoryParams"} is disappered
-# Then I can see it {selector: "StoryParams"} is displayed
+Then I can see it {selector: "StoryParams"} is displayed @skip: ("summary-story-name@h4w"==this.Story)
 @parameters: [
     {
         Story: "summary-story-name@h4w",
@@ -44,7 +44,7 @@ Then I can see it {selector: "StoryParams"} is displayed
 
 @scenario: Expand a phase
 When I click it {xpath: "Access_Gallery_View_Phase_Title"}
-When I wait time {seconds: "WaitTime"} seconds @skip: ("params-show-hide-toggle@h4w('Show Parameters',1)"==this.Params_Toggle_Show_Button)
+When I wait time {seconds: "WaitTime"} seconds
 Then I can see it {selector: "StepTitle"} is displayed
 @parameters: [
     {
@@ -58,21 +58,32 @@ Then I can see it {selector: "StepTitle"} is displayed
 
 @scenario: Expand the XHR testing phase
 When I click it {xpath: "Test_XHR_Phase_Title"}
-When I wait time {seconds: "WaitTime"} seconds @skip: ("params-show-hide-toggle@h4w('Hide Parameters',1)"==this.Params_Toggle_Show_Button)
-Then I can see it {xpath: "XHRStepTitle"} is displayed
+When I wait time {seconds: "WaitTime"} seconds
+Then I can see it {xpath: "XHRStepTitle"} is displayed @skip: (!this.ToggleFlag)
+Then I can see it {xpath: "XHRStepTitle"} is disappeared @skip: (this.ToggleFlag)
 @parameters: [
     {
         Test_XHR_Phase_Title: "phase-title@h4w('Test XHR communications')",
         XHRStepTitle: "step-title@h4w('And I received response with GetVersionData')",
-        WaitTime: 1
+        WaitTime: 1,
+        ToggleFlag: true
+    },
+    {
+        Test_XHR_Phase_Title: "phase-title@h4w('Test XHR communications')",
+        XHRStepTitle: "step-title@h4w('And I received response with GetVersionData')",
+        WaitTime: 1,
+        ToggleFlag: false
     }
+    
 ]
 
 @scenario: Open XHR record dialogue popover
-When I click it {selector: "Open_XHR_Icon"}
+When I click it {xpath: "Test_XHR_Phase_Title"}
+And I click it {selector: "Open_XHR_Icon"}
 Then I can see it {selector: "XHR_Detail_Panel"} is displayed
 @parameters: [
     {
+        Test_XHR_Phase_Title: "phase-title@h4w('Test XHR communications')",
         Open_XHR_Icon: "open-xhr-entry@h4w",
         XHR_Detail_Panel: ".XHRDetail__xhrpanel___38xQW"
     }
