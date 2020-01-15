@@ -15,5 +15,8 @@
 *.zip
 
 node_modules
+reports
+stepBundles
+
 .vscode
 
