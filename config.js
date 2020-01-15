@@ -48,5 +48,7 @@ module.exports = {
     // Timeout (ms) for waiting xhr call response, default is 30000.
     xhrResponseTimeout: 10000,
 
-    globalParams: 'project/params'
+    globalParams: 'project/params',
+
+    workers: 4
 };

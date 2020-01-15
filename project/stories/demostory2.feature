@@ -1,7 +1,7 @@
 ## Test the stage dashboard
 
 @scenario: Start enter the report page
-Given I have opened url {url: "LocalDemoURL"}
+Given I have opened url {url: "ReportURL"}
 # And I have seen it {selector: "LogoTitle"} is displayed
 Then I can see it {selector: "StageTitle"} is displayed
 @parameters: [
@@ -15,7 +15,7 @@ When I click it {selector: "Story"}
 And I have seen it {selector: "StoryDetail"} is displayed
 # And I click it {selector: "ExpandStoryParams"}
 Then I can see it {selector: "StoryParams"} is disappered
-Then I can see it {selector: "StoryParams"} is displayed
+# Then I can see it {selector: "StoryParams"} is displayed
 @parameters: [
     {
         Story: "summary-story-name@h4w",

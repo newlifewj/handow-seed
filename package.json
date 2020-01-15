@@ -1,16 +1,15 @@
 {
     "name": "test",
-    "version": "1.0.0",
+    "version": "0.2.0",
     "description": "description",
+    "author": "Jian",
+    "license": "MIT",
     "main": "index.js",
     "scripts": {
-        "test": "test",
         "demostory": "handow --story project/stories/demostory",
         "demoplan": "handow --plan project/demoplan"
     },
-    "author": "Jian",
-    "license": "MIT",
     "dependencies": {
-        "handow": "^0.1.0"
+        "handow": "^0.2.1"
     }
 }
