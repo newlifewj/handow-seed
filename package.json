@@ -6,10 +6,12 @@
     "license": "MIT",
     "scripts": {
         "demostory": "handow --story project/stories/demostory",
+        "demostory1": "handow --story project/stories/demostory1",
+        "demostory2": "handow --story project/stories/demostory2",
         "demoplan": "handow --plan project/demoplan",
         "teststory": "node ./project/test.js"
     },
     "dependencies": {
-        "handow": "^0.2.2"
+        "handow": "^0.2.3"
     }
 }
