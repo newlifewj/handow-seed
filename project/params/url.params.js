@@ -12,5 +12,6 @@ module.exports = {
     // LocalReportURL: 'file:///C:/handow/handow-dev/demotarget/index.html'
 
     Handow_Homepage: "http://www.handow.org",
-    Handow_Form: "http://www.handow.org/lab/demoform"
+    // Handow_Form: "http://www.handow.org/lab/demoform"
+    Handow_Form: "http://localhost:3000/lab/demoform"
 };

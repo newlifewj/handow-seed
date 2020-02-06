@@ -17,7 +17,7 @@ And I can see it {selector: "Submit_Button"} is disabled
 ]
 
 @scenario: Test Username validation
-When I enter value {value: "Username_Value"} to input {input: "Username_Input"}
+When I enter value {value: "Username_Value"} to input {selector: "Username_Input"}
 Then I can see it {selector: "Validate_Error"} is displayed
 @parameters: [
     {
@@ -37,7 +37,6 @@ Then I can see it {selector: "Validate_Error"} is displayed
     }
 ]
 
-
 @scenario: Choose secured
 @skip: (1==this.Loop_Ctrl)
 When I click it {selector: "Secured_Checkbox"}
@@ -49,8 +48,8 @@ Then I can see it {selector: "Submit_Button"} is disabled
 ]
 
 @scenario: Fill form with valid Username and Email when no-secured
-When I enter value {value: "Username_Value"} to input {input: "Username_Input"}
-And I enter value {value: "Email_Value"} to input {input: "Email_Input"}
+When I enter value {value: "Username_Value"} to input {selector: "Username_Input"}
+And I enter value {value: "Email_Value"} to input {selector: "Email_Input"}
 Then I can see it {selector: "Submit_Button"} is enabled @skip: (2==this.Loop_Ctrl)
 Then I can see it {selector: "Submit_Button"} is disabled @skip: (1==this.Loop_Ctrl)
 @parameters: [
@@ -63,13 +62,12 @@ Then I can see it {selector: "Submit_Button"} is disabled @skip: (1==this.Loop_C
 ]
 
 @scenario: Select level no matter secured or no-secured
-When I click it {selector: "Level_Select"}
-And I click it {selector: "Select_Level_1"}
+When I select option {option: "Level_Option1"} of it {selector: "Level_Select"}
 Then I can see it {selector: "Submit_Button"} is enabled
 @parameters: [
     {
         Level_Select: "#form-select-level",
-        Select_Level_1: "#form-select-level-1"
+        Level_Option1: "1"
     }
 ]
 
@@ -86,4 +84,3 @@ Then I can see it {selector: "Feedback_Message"} is showing text {text: "Success
         Success_Secured: "Submit secured form successfully"
     }
 ]
-

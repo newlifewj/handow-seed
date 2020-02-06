@@ -2,7 +2,6 @@
 Given I go to url {url: "Handow_Form"}
 Then I can see it {selector: "Form_View"} is displayed
 And I can see it {selector: "Submit_Button"} is disabled
-# And I can see it {selector: "Username"} with value{value: "Username_Value"}
 @parameters: [
     {
         Form_View: "#demo-form-container",
@@ -28,7 +27,7 @@ Then I can see it {selector: "Validate_Error"} is displayed
     {
         Username_Value: "Jack 12345 Smith",
         Username_Input: "#form-input-username",
-        Validate_Error: "#username-validation"
+        Validate_Error: "#username-validation",
     },
     {
         Username_Value: "123456",

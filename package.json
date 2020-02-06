@@ -7,14 +7,17 @@
     "scripts": {
         "basic_1": "handow --story project/stories/basic_1.feature",
         "basic_2": "handow --story project/stories/basic_2.feature",
-        "form": "handow --story project/stories/form.feature",
+        "form": "handow --buildstep && handow --story project/stories/form.feature",
         "demostory": "handow --story project/stories/demostory",
         "demostory1": "handow --story project/stories/demostory1",
         "demostory2": "handow --story project/stories/demostory2",
         "demoplan": "handow --plan project/demoplan",
+        "buildstep": "handow --buildstep",
+        "parsestory": "handow --parsestory",
+        "handow": "handow",
         "teststory": "node ./project/test.js"
     },
     "dependencies": {
-        "handow": "^0.3.0"
+        "handow": "latest"
     }
 }
