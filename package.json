@@ -7,7 +7,7 @@
     "scripts": {
         "basic_1": "handow --story project/stories/basic_1.feature",
         "basic_2": "handow --story project/stories/basic_2.feature",
-        "form": "handow --buildstep && handow --story project/stories/form.feature",
+        "Form_1": "handow --buildstep && handow --story project/stories/Form_1.feature",
         "demostory": "handow --story project/stories/demostory",
         "demostory1": "handow --story project/stories/demostory1",
         "demostory2": "handow --story project/stories/demostory2",
