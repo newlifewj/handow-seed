@@ -16,5 +16,9 @@ When("I wait it {url} is responsed with status {status}", async (url, status) =>
     });
 });
 
+When("I do nothing", async () => {
+    await page.waitFor( 100 );
+})
+
 
 
