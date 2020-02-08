@@ -10,10 +10,6 @@ const expect = require('expect');
 const fs = require('fs');
 const deepExtend = require('deep-extend');
 
-Then("I am okay", async() => {
-    await page.waitFor( 100 );
-});
-
 
 Then("I can see them {xpath} sorted by order {order}", async (xpath, order) => {
     await page.waitForXPath(xpath, { visible: true, timeout: 100 });
@@ -59,26 +55,3 @@ Then("I can see them {xpath} sorted by order {order}", async (xpath, order) => {
     }
 });
 
-Then("I can see them {xpath} amount number {number}", async (xpath, number) => {
-    await page.waitForXPath(xpath, { visible: true, timeout: 100 });
-    const elements = await page.$x( xpath );
-
-    expect(elements.length).toEqual(number);
-});
-
-Then("I can see it {xpath} is showing text {text}", async (xpath, text) => {
-    /**
-     * pptr use $eval evaalute selector, then get the text result, but can not do it on xpath.
-     * Here we get 'JSHandles' after $x(xpath), it is JavaScript references.
-     * Call getProperty() to get an object, and then exteact text by toString().
-     * However, the text of the property object includes other extra strings like "JSHandle:[actual-text]".
-     * That's why we have to use 'includes()' instead of equal compare.
-     */
-    const elements = await page.$x( xpath );
-
-    // this got JSHandle:<text> pairs, not the text -- 2020/02/08
-    // const prop = await elements[0].getProperty('innerText');
-    
-    const prop = await (await elements[0].getProperty('innerText')).jsonValue();
-    expect(prop.trim()).toEqual(text.trim());
-});
