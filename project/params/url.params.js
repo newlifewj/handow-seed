@@ -14,6 +14,6 @@ module.exports = {
     Handow_Homepage: "http://www.handow.org",
     Handow_Form: "http://www.handow.org/lab/demoform",
     Handow_Table: "http://www.handow.org/lab/demotable",
-    // Handow_Lab: "http://www.handow.org/lab"
-    Handow_Lab: "http://localhost:3400/lab"
+    Handow_Lab: "http://www.handow.org/lab"
+    // Handow_Lab: "http://localhost:3400/lab"
 };

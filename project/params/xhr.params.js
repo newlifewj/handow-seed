@@ -37,6 +37,12 @@ module.exports = {
         }
     },
 
+    Handow_Version_Data: {
+        handowCore: {
+            version: "v0.3.2"
+        }
+    },
+
     WrongURLAPI: {
         method: "GET",
         url: "/notexisted",
@@ -45,6 +51,38 @@ module.exports = {
             page: 1,
             size: 25
         },
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    },
+
+    XHR_Get_Version: {
+        method: "GET",
+        url: "/version.json",
+        baseURL: "http://www.handow.org",
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    },
+
+    XHR_Post_User: {
+        method: "POST",
+        url: "/api/users",
+        baseURL: "https://reqres.in",
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        data: {
+            "username": "Jack Smith",
+            "email": "Jack@gmail.com",
+            "level": 0
+        }
+    },
+
+    XHR_Get_Users: {
+        method: "GET",
+        url: "/api/users",
+        baseURL: "https://reqres.in",
         headers: {
             'X-Requested-With': 'XMLHttpRequest'
         }
@@ -62,5 +100,13 @@ module.exports = {
         data: {
             username: "Mark"
         }
-    }
+    },
+
+    Test_Cookies: [
+        {
+            name: "HANDOW-TEXT-TOKEN",
+            value: "A182F6B9B52BCBBD01B1702A0B0E8E61"
+        }
+    ]
+        
 };

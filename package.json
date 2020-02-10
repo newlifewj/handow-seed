@@ -7,8 +7,11 @@
     "scripts": {
         "basic_1": "handow --story project/stories/basic_1.feature",
         "basic_2": "handow --story project/stories/basic_2.feature",
-        "Form_1": "handow --buildstep && handow --story project/stories/Form_1.feature",
-        "Table": "handow --buildstep && handow --story project/stories/Table.feature",
+        "form_1": "handow --buildstep && handow --story project/stories/form_1.feature",
+        "table": "handow --buildstep && handow --story project/stories/table.feature",
+        "xhr": "handow --buildstep && handow --story project/stories/xhr_cookie.feature",
+        "labPlan_1": "handow --buildstep && handow --plan project/labPlan_1",
+        "labPlan_2": "handow --buildstep && handow --plan project/labPlan_2",
         "demostory": "handow --story project/stories/demostory",
         "demostory1": "handow --story project/stories/demostory1",
         "demostory2": "handow --story project/stories/demostory2",

@@ -22,3 +22,13 @@ When("I do nothing", async () => {
 
 
 
+Given("I set cookies {cookies} to current browser instance", async (cookies) => {
+    await page.setCookie(...cookies);
+})
+
+When("I set cookies {cookies} to current browser instance", async (cookies) => {
+    await page.setCookie(...cookies);
+})
+
+
+
