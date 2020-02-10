@@ -1,8 +1,8 @@
 {
     "name": "handow-seed",
-    "version": "0.3.2",
-    "description": "Sample Handow UAT as project seed and demo",
-    "author": "Jian",
+    "version": "0.3.5",
+    "description": "Sample Handow UAT as demo and project seed",
+    "author": "Jian Wang",
     "license": "MIT",
     "scripts": {
         "basic_1": "handow --story project/stories/basic_1.feature",
