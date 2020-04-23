@@ -23,7 +23,7 @@
         "hdw": "handow"
     },
     "dependencies": {
-        "handow": "lateat",
+        "handow": "latest",
         "handow-shm": "latest"
     }
 }
