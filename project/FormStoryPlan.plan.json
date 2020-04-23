@@ -1,0 +1,17 @@
+{
+    "title": "Plan For Single Form Story",
+    "stages": [
+        {
+            "stage": "The stage",
+            "stories": [ "form_1" ]
+        }
+    ],
+    "config": {
+        "consoleOutput": "story",
+        "outputSkipInfo": false,
+        "newIncognitoContext": true,
+        "headlessChromium": true,
+        "workers": 3,
+        "saveJsonReport": false
+    }
+}

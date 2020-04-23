@@ -1,0 +1,17 @@
+{
+    "title": "Plan For Single XHR Story",
+    "stages": [
+        {
+            "stage": "The stage",
+            "stories": [ "xhr_cookie" ]
+        }
+    ],
+    "config": {
+        "consoleOutput": "story",
+        "outputSkipInfo": false,
+        "newIncognitoContext": true,
+        "headlessChromium": true,
+        "workers": 3,
+        "saveJsonReport": false
+    }
+}
