@@ -6,6 +6,7 @@
 .settings
 .tmp
 .git
+.vscode
 
 *.7z
 *.bin
@@ -15,8 +16,11 @@
 *.zip
 
 node_modules
-reports
 stepBundles
+log
+sessions
+devDoc
 
-.vscode
+ToDo.md
+package-lock.json
 

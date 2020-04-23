@@ -1,27 +1,29 @@
 {
     "name": "handow-seed",
-    "version": "0.4.0",
-    "description": "Sample Handow UAT as demo and project seed",
-    "author": "Jian Wang",
+    "version": "v0.7.2",
+    "description": "Handow seed project",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/newlifewj/handow-seed.git"
+    },
+    "author": "J.W.",
     "license": "MIT",
+    "engines": {
+        "node": ">=10.0.0"
+    },
     "scripts": {
-        "basic_1": "handow --story project/stories/basic_1.feature",
-        "basic_2": "handow --story project/stories/basic_2.feature",
-        "form_1": "handow --buildstep && handow --story project/stories/form_1.feature",
-        "table": "handow --buildstep && handow --story project/stories/table.feature",
-        "xhr": "handow --buildstep && handow --story project/stories/xhr_cookie.feature",
-        "labPlan_1": "handow --buildstep && handow --plan project/labPlan_1",
-        "labPlan_2": "handow --buildstep && handow --plan project/labPlan_2",
-        "demostory": "handow --story project/stories/demostory",
-        "demostory1": "handow --story project/stories/demostory1",
-        "demostory2": "handow --story project/stories/demostory2",
-        "demoplan": "handow --plan project/demoplan",
-        "buildstep": "handow --buildstep",
-        "parsestory": "handow --parsestory",
-        "handow": "handow",
-        "teststory": "node ./project/test.js"
+        "start": "cross-env NODE_ENV=development SHM_MODE=public OPEN_BROWSER=true handow-shm",
+        "public": "cross-env NODE_ENV=production SHM_MODE=public handow-shm",
+        "secure": "cross-env NODE_ENV=production SHM_MODE=secure handow-shm",
+        "private": "cross-env NODE_ENV=production SHM_MODE=private handow-shm",
+        "hdw-form-story": "handow --buildstep && handow --story project/stories/form_1.feature",
+        "hdw-lab-plan": "handow --buildstep && handow --plan project/HandowLab",
+        "hdw-buildstep": "handow --buildstep",
+        "hdw-parsestory": "handow --parsestory project/stories/Table.feature",
+        "hdw": "handow"
     },
     "dependencies": {
-        "handow": "latest"
+        "handow": "lateat",
+        "handow-shm": "latest"
     }
 }
