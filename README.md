@@ -73,6 +73,8 @@ Run SHM server locally in _production-secure_ mode. All users are "USER" by defa
 $ npm run public
 ```
 
+Run SHM server locally in _production-public_ mode. Everybody is "ADMIN" without signin.
+
 #### Hnadow CLI Examples
 
 You can also call Handow CLI to run test story and plans, running info showing on console and the reports are presented by Handow built-in render.
