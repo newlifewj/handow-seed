@@ -110,7 +110,8 @@ Print Handow CLI help info.
 
 ### About Handow and Handow-SHM
 
-Handow is an E2E test tool basing on Puppeteer driver, it is an Open Source Project under MIT license.
-Handow-SHM is a test server with SPA UI to manage Handow impelmentation.
+**Handow** is an E2E test tool basing on Puppeteer driver, it is an Open Source Project under **MIT** license.
+
+**Handow-SHM** is a test server with SPA UI to manage Handow impelmentation.
 
 [Handow Site](http://www.handow.org)
