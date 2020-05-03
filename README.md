@@ -3,7 +3,7 @@
 Clone this project as a seed or demo. It is a template to scaffold an E2E test (UAT) system basing on Handow and Handow-SHM.
 
 [Hoandow Documentation](http://www.handow.org/documents)
-(Or refer the brief intrudction [Handow and Handow-SHM](http://www.handow.org/documents/Handow_And_SHM))
+(Or refer the brief intrudction [Handow and Handow-SHM](http://www.handow.org/documents/Handow_HandowSHM))
 
 ### Summary
 
@@ -104,7 +104,7 @@ Run Handow internal task. Properly you need versify the Handow APIs when you wan
 $ npm run hdw
 ```
 
-Print Handow CLI help info.
+Show Handow CLI help.
 
 > [The test target web app in demo stories](http://www.handow.org/lab)
 
