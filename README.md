@@ -1,5 +1,7 @@
 ## E2E Test Project With Handow And Handow-SHM
 
+[Online Demo](http://demo.shm.handow.org/)
+
 Clone this project as a seed or demo. It is a template to scaffold an E2E test (UAT) system basing on Handow and Handow-SHM.
 
 [Hoandow Documentation](http://www.handow.org/documents)
