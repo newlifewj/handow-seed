@@ -16,7 +16,7 @@ The project is a Handow implementation plus a comprehensive web server and power
 + Use it as local tool to test target web application.
 + Deploy it as a test server and even join it into your CI/CD pipeline.
 
-[Super-Handow-Managerment Hand Book](http://www.handow.org/documents/SHM_Hand_Book)
+[Super-Handow-Managerment Hand Book](http://www.handow.org/documents/HandbookSHM)
 
 ### Install
 
