@@ -1,6 +1,6 @@
 {
     "name": "handow-seed",
-    "version": "v0.8.2",
+    "version": "v0.10.0",
     "description": "Handow seed project",
     "repository": {
         "type": "git",
@@ -19,8 +19,8 @@
         "hdw-form-story": "handow --buildstep && handow --story project/stories/form_1.feature",
         "hdw-lab-plan": "handow --buildstep && handow --plan project/HandowLab",
         "hdw-buildstep": "handow --buildstep",
-        "hdw-parsestory": "handow --parsestory project/stories/Table.feature",
-        "hdw": "handow"
+        "hdw-parsestory": "handow --parsestory project/stories/table.feature",
+        "hdw-help": "handow --help"
     },
     "dependencies": {
         "handow": "latest",
