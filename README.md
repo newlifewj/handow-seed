@@ -56,7 +56,7 @@ Mostly you want use SHM to manage Handow.
 $ npm start
 ```
 
-Run SHM server locally in _development-public_ mode, messages and errors are logged to console, and the UI is opened when server startup. There isn't permission control when SHM server run in _development-public_ mode. 
+Run SHM server locally in _development-public_ mode, messages/errors are logged to console, and the UI is opened when server startup. No permission control when SHM server run in _development-public_ mode.
 
 ```bash
 $ npm run private
@@ -113,7 +113,11 @@ run a plan
 Or you can also define npm scripts to call Handow CLI as examples in _package.json_
 ```
 
-> Strong recommend using SHM as test runner to get updated report render with good user experience. 
+> Strong recommend using SHM as test runner to get updated report render with good user experience.
+
+### Deploy project as remote test server
+
+[Deploy SHM on cloud](http://www.handow.org/documents/DeploySHMOnCloud)
 
 ### About Handow and Handow-SHM
 
