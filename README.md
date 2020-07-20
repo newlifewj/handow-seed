@@ -46,7 +46,7 @@ Script commans are defined in _package.json_:
     }
 ```
 
-You can launch the Handow-SHM server to run test demos or just run them by CLI.
+Launch the Handow-SHM server to run test demos or just run them with Handow CLI.
 
 #### SHM running Examples
 
@@ -56,13 +56,13 @@ Mostly you want use SHM to manage Handow.
 $ npm start
 ```
 
-Run SHM server locally in _development-public_ mode, output log messages to console and the UI is opening when server startup. There isn't permission control when SHM server run in public mode.
+Run SHM server locally in _development-public_ mode, messages and errors are logged to console, and the UI is opened when server startup. There isn't permission control when SHM server run in _development-public_ mode. 
 
 ```bash
 $ npm run private
 ```
 
-Run SHM server locally in _production-private_ mode, users need signin to access SHM. Address browser "_localhost:3333/_" to open the UI. There are 2 users existed already.
+Run SHM server locally in _production-private_ mode, users need signin to access SHM. Address browser "_localhost:3333/_" to open the UI. There are 2 users are registered already in _shmSetting.json_.
 
 + admin | admin (username | password) with "ADMIN" role
 + user | user (username | password) with "USER" role
@@ -81,34 +81,39 @@ Run SHM server locally in _production-public_ mode. Everybody is "ADMIN" without
 
 #### Hnadow CLI Examples
 
-You can also call Handow CLI to run test story and plans, running info showing on console and the reports are presented by Handow built-in renderer.
+```bash
+npx handow --help
+```
+Show Handow CLI help
 
 ```bash
-$ npm run hdw-lab-plan
+$ npx handow --buildsteps
 ```
 
-Run a test plan. You can modify the script to run others existed demo plans (in '/project' directory).
+Rebuild all step files
 
 ```bash
-$ npm run hdw-form-story
+$ npx handow --parsestory --/project/stories/table.feature
 ```
 
-Run a single test story. You can modify the command to run others existed demo story (in '/project/stories' directory).
+Parse a specific story file
 
 ```bash
-$ npm run hdw-buildstep
-$ npm run hdw-parsestory
+$ npx handow --story --/project/stories/table.feature
 ```
 
-Run Handow internal task. Properly you need versify the Handow APIs when you want use Handow as a module in your own application.
+run a specific story
 
 ```bash
-$ npm run hdw
+$ npx handow --plan --/project/HandowLab
+```
+run a plan
+
+```
+Or you can also define npm scripts to call Handow CLI as examples in _package.json_
 ```
 
-Show Handow CLI help.
-
-> [The test target web app in demo stories](http://www.handow.org/lab)
+> Strong recommend using SHM as test runner to get updated report render with good user experience. 
 
 ### About Handow and Handow-SHM
 
@@ -117,3 +122,5 @@ Show Handow CLI help.
 **Handow-SHM** is a test server with SPA UI to manage Handow impelmentation.
 
 [Handow Site](http://www.handow.org)
+
+[The test target web app in demo stories](http://www.handow.org/lab)
