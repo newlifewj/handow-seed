@@ -16,10 +16,13 @@
         "public": "cross-env NODE_ENV=production SHM_MODE=public handow-shm",
         "secure": "cross-env NODE_ENV=production SHM_MODE=secure handow-shm",
         "private": "cross-env NODE_ENV=production SHM_MODE=private handow-shm",
-        "hdw-form-story": "handow --buildstep && handow --story project/stories/form_1.feature",
         "hdw-lab-plan": "handow --buildstep && handow --plan project/HandowLab",
         "hdw-buildstep": "handow --buildstep",
         "hdw-parsestory": "handow --parsestory project/stories/table.feature",
+        "basic_1": "handow --story -- project/stories/basic_1.feature",
+        "basic_2": "handow --story -- project/stories/basic_2.feature",
+        "form_1": "handow --buildstep && handow --story project/stories/form_1.feature",
+        "table": "handow --buildstep && handow --story project/stories/table.feature",
         "hdw-help": "handow --help"
     },
     "dependencies": {

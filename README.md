@@ -113,11 +113,8 @@ run a plan
 Or you can also define npm scripts to call Handow CLI as examples in _package.json_
 ```
 
-> Strong recommend using SHM as test runner to get updated report render with good user experience.
+> Strong recommend using SHM as test runner to get the SPA as reports viewer.
 
-### Deploy project as remote test server
-
-[Deploy SHM on cloud](http://www.handow.org/documents/DeploySHMOnCloud)
 
 ### About Handow and Handow-SHM
 
@@ -127,4 +124,4 @@ Or you can also define npm scripts to call Handow CLI as examples in _package.js
 
 [Handow Site](http://www.handow.org)
 
-[The test target web app in demo stories](http://www.handow.org/lab)
+[The test target web app in demo](http://www.handow.org/lab)
