@@ -7,7 +7,7 @@
     "sessionSign": "_session@shm_",
     "sessionExpire": 28800000,
     "scheduleMode": "manual",
-    "scheduleTimezone": null,
+    "shmTimezone": null,
     "shmToken": "df343#1$2321",
     "loopSchedule": "HandowLab,FormStoryPlan,XHRStoryPlan",
     "autoShowReport": false,
