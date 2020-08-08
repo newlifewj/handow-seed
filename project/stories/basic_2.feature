@@ -1,4 +1,4 @@
-@tags: ["New Tag"]
+@tags: ["duplicated"]
 @scenario: Navigate to Handow Homepage
 Given I go to url {url: "Handow_Homepage"}
 And I wait all pending requests resolved

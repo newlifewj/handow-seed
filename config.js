@@ -35,7 +35,8 @@ module.exports = {
 
     reportPath: "records",
 
-    autoArchive: 10,
+    // Archive stack length, default is false - no archive stack
+    autoArchive: 100,
 
     consoleOutput: "step",
 

@@ -16,7 +16,7 @@ And I can see it {selector: "Submit_Button"} is disabled
     }
 ]
 
-@scenario: Test Username validation
+@scenario: Test Username validation, the username field must be 3-12 assic characters and not a number
 When I enter value {value: "Username_Value"} to input {selector: "Username_Input"}
 Then I can see it {selector: "Validate_Error"} is displayed
 @parameters: [

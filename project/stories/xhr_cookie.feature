@@ -1,6 +1,6 @@
 # xhr_cookie.feature
 @tags: ["xhr","cookie"]
-@scenario: Navigate to Handow Lab
+@scenario: Navigate to the front page of Handow Lab, verify the buttons available in view
 Given I go to url {url: "Handow_Homepage"}
 Then I can see it {selector: "Lab_Version_Button"} is displayed
 And I can see it {selector: "Lab_Preset_Button"} is displayed
@@ -39,7 +39,7 @@ And the cookie {cookiename: "HANDOW_TOKEN"} with value {value: "TOKEN_VALUE"} av
 ]
 
 # XHR and cookies parameters are defined in xhr.params.js globally
-@scenario: XHR get lab version
+@scenario: Access the GET_VERSION API and verify the Handow version property in response
 When I send request xhr {xhr: "XHR_Get_Version"}
 Then I received response with status {status: "HTTP200"} HTTP status
 And I received response with data {data: "Handow_Version_Data"}

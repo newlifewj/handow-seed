@@ -1,4 +1,4 @@
-## Test the stage dashboard
+# Test the stage dashboard
 
 @scenario: Start enter the report page
 Given I have opened url {url: "ReportURL"}
