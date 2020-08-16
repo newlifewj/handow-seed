@@ -7,7 +7,7 @@ Then I can see it {selector: "Table_Demo_Link"} is showing text {text: "Table_De
 # Then I can see it {xpath: "Table_Demo_Probe"} is showing text {text: "Table_Demo_Label"}
 @parameters: [
     {
-        Table_Demo_Link: "#lab-demo-1",
+        Table_Demo_Link: "#lab-demo-table",
         Table_Demo_Label: "Table Demo",
         Table_Demo_Probe: "demo-probe-1@h4w"
     }

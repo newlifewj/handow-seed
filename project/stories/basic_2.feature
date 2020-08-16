@@ -19,13 +19,13 @@ And I can see it {selector: "Probe_Trace_Demo_Link"} is showing text {text: "Pro
 @parameters: [
     {
         A_Moment: 1,
-        Form_Demo_Link: "#lab-demo-0",
+        Form_Demo_Link: "#lab-demo-form",
         Form_Demo_Label: "Form Demo",
-        Table_Demo_Link: "#lab-demo-1",
+        Table_Demo_Link: "#lab-demo-table",
         Table_Demo_Label: "Table Demo",
         XHR_Cookie_Demo_Link: "#lab-demo-2",
         XHR_Cookie_Demo_Label: "XHR & Cookies Demo",
-        Probe_Trace_Demo_Link: "#lab-demo-3",
+        Probe_Trace_Demo_Link: "#lab-demo-ref",
         Probe_Trace_Demo_Label: "Probe and trace HTML"
     }
 ]
