@@ -9,7 +9,7 @@
         {
             "stage": "Paralle group1",
             "description": "This is the 2nd stage to verify ...",
-            "stories": [ "basic_1", "basic_2", "form_1", "table" ]
+            "stories": [ "basic_1", "local_nav", "dialog", "form_1", "table" ]
         },
         {
             "stage": "Paralle group2",

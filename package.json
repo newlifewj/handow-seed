@@ -1,7 +1,8 @@
 {
     "name": "handow-seed",
-    "version": "v0.11.0",
+    "version": "v0.11.1",
     "description": "Handow seed project",
+    "keywords": [ "test", "e2e", "bdd", "tdd", "uat", "e2e-test", "javascript", "test-server", "puppeteer", "selenium", "serenity", "jest", "jasmine", "handow", "chromium" ],
     "repository": {
         "type": "git",
         "url": "https://github.com/newlifewj/handow-seed.git"
@@ -23,6 +24,8 @@
         "basic_2": "handow --story --project/stories/basic_2.feature",
         "form_1": "handow --buildstep && handow --story project/stories/form_1.feature",
         "table": "handow --buildstep && handow --story project/stories/table.feature",
+        "dialog": "handow --buildstep && handow --story project/stories/dialog.feature",
+        "localNav": "handow --buildstep && handow --story project/stories/local_nav.feature",
         "hdw-help": "handow --help"
     },
     "dependencies": {

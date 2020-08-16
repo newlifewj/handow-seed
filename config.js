@@ -7,8 +7,6 @@
  */
 
 module.exports = {
-    // The waiting ms for async operations, e.g. API call, page refreshing ...
-    asynctime: 10000,
 
     // The viewport size, "mobile"==460x720 | "desktop"==1024x768 | "default"==800x600
     viewport: "desktop",
