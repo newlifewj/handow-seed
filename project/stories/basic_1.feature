@@ -14,6 +14,6 @@ When I click it {selector: "Handow_Lab_Link"}
 Then I can see it {selector: "Form_Demo"} is displayed
 @parameters: [
     {
-        Form_Demo: "#lab-demo-0"
+        Form_Demo: "#lab-demo-form"
     }
 ]

@@ -23,7 +23,7 @@ And I can see it {selector: "Probe_Trace_Demo_Link"} is showing text {text: "Pro
         Form_Demo_Label: "Form Demo",
         Table_Demo_Link: "#lab-demo-table",
         Table_Demo_Label: "Table Demo",
-        XHR_Cookie_Demo_Link: "#lab-demo-2",
+        XHR_Cookie_Demo_Link: "#lab-demo-xhrcookie",
         XHR_Cookie_Demo_Label: "XHR & Cookies Demo",
         Probe_Trace_Demo_Link: "#lab-demo-ref",
         Probe_Trace_Demo_Label: "Probe and trace HTML"
