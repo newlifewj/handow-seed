@@ -1,10 +1,10 @@
 @tags: ["local", "misc"]
 @scenario: Go to Handow.org homepage
-Given I go to url {url: "Local_Home"}
+Given I go to url {url: "Handow_Home"}
 And I wait all pending requests resolved
 Then I can see it {selector: "Handow_Lab_Link"} is displayed
 @parameters: [{
-  Local_Home: "http://www.handow.org/
+  Handow_Home: "http://www.handow.org/",
   Handow_Lab_Link: "#handow-lab"
 }]
 
@@ -31,6 +31,6 @@ Then I can see it {selector: "Form_Demo"} is displayed
     Form_Demo: "#lab-demo-form"
 }]
 
-@scenario: Browser backward to homepahe
+@scenario: Browser backward to homepage
 When I navigate browser to move backward
-Then I can see the address of current page is url {url: "Local_Home"}
+Then I see the address is url {url: "Handow_Home"}
