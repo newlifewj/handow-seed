@@ -4,7 +4,7 @@ Given I go to url {url: "Local_Home"}
 And I wait all pending requests resolved
 Then I can see it {selector: "Handow_Lab_Link"} is displayed
 @parameters: [{
-  Local_Home: "http://localhost:3200/",
+  Local_Home: "http://www.handow.org/
   Handow_Lab_Link: "#handow-lab"
 }]
 
