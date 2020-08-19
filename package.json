@@ -1,6 +1,6 @@
 {
     "name": "handow-seed",
-    "version": "v0.12.0",
+    "version": "v0.12.1",
     "description": "Handow seed project",
     "keywords": [ "test", "e2e", "bdd", "tdd", "uat", "e2e-test", "javascript", "test-server", "puppeteer", "selenium", "serenity", "jest", "jasmine", "handow", "chromium" ],
     "repository": {
@@ -26,6 +26,7 @@
         "table": "handow --buildstep && handow --story project/stories/table.feature",
         "dialog": "handow --buildstep && handow --story project/stories/dialog.feature",
         "localNav": "handow --buildstep && handow --story project/stories/local_nav.feature",
+        "file_loading": "handow --buildstep && handow --story project/stories/file_loading.feature",
         "hdw-help": "handow --help"
     },
     "dependencies": {
