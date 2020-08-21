@@ -1,10 +1,13 @@
 "use strict";
 
+/* eslint-disable no-undef */
+
+// References will inject to step contex in running time
+const browser = null;
+const page = null;
+const config = null;
 const Given = null;
 const When = null;
-const Then = null;
-const page = null;
-let config;
 
 const expect = require('expect');
 const fs = require('fs');
