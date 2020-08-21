@@ -1,6 +1,6 @@
 {
     "name": "handow-seed",
-    "version": "v0.12.1",
+    "version": "v0.12.2",
     "description": "Handow seed project",
     "keywords": [ "test", "e2e", "bdd", "tdd", "uat", "e2e-test", "javascript", "test-server", "puppeteer", "selenium", "serenity", "jest", "jasmine", "handow", "chromium" ],
     "repository": {
@@ -17,16 +17,18 @@
         "public": "cross-env NODE_ENV=production SHM_MODE=public handow-shm",
         "secure": "cross-env NODE_ENV=production SHM_MODE=secure handow-shm",
         "private": "cross-env NODE_ENV=production SHM_MODE=private handow-shm",
-        "hdw-lab-plan": "handow --buildstep && handow --plan project/HandowLab",
-        "hdw-buildstep": "handow --buildstep",
-        "hdw-parsestory": "handow --parsestory project/stories/table.feature",
+        "HandowLab": "handow --buildstep && handow --plan project/HandowLab",
+        "buildStep": "handow --buildstep",
+        "parseStory": "handow --parsestory project/stories/table.feature",
         "basic_1": "handow --story --project/stories/basic_1.feature",
         "basic_2": "handow --story --project/stories/basic_2.feature",
         "form_1": "handow --buildstep && handow --story project/stories/form_1.feature",
         "table": "handow --buildstep && handow --story project/stories/table.feature",
+        "xhr_cookie": "handow --buildstep && handow --story project/stories/xhr_cookie.feature",
         "dialog": "handow --buildstep && handow --story project/stories/dialog.feature",
         "localNav": "handow --buildstep && handow --story project/stories/local_nav.feature",
         "file_loading": "handow --buildstep && handow --story project/stories/file_loading.feature",
+        "property_keyboard": "handow --buildstep && handow --story project/stories/property_keyboard.feature",
         "hdw-help": "handow --help"
     },
     "dependencies": {
