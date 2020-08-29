@@ -43,7 +43,7 @@ Then I can see it {selector: "StoryParams"} is displayed
 
 @scenario: Expand a phase
 When I click it {xpath: "Access_Gallery_View_Phase_Title"}
-When I wait time {seconds: "WaitTime"} seconds @skip: ("params-show-hide-toggle@h4w('Show Parameters',1)"==this.Params_Toggle_Show_Button)
+When I wait seconds {seconds: "WaitTime"} @skip: ("params-show-hide-toggle@h4w('Show Parameters',1)"==this.Params_Toggle_Show_Button)
 Then I can see it {selector: "StepTitle"} is displayed
 @parameters: [
     {
@@ -57,7 +57,7 @@ Then I can see it {selector: "StepTitle"} is displayed
 
 @scenario: Expand the XHR testing phase
 When I click it {xpath: "Test_XHR_Phase_Title"}
-When I wait time {seconds: "WaitTime"} seconds @skip: ("params-show-hide-toggle@h4w('Hide Parameters',1)"==this.Params_Toggle_Show_Button)
+When I wait seconds {seconds: "WaitTime"} @skip: ("params-show-hide-toggle@h4w('Hide Parameters',1)"==this.Params_Toggle_Show_Button)
 Then I can see it {xpath: "XHRStepTitle"} is displayed
 @parameters: [
     {

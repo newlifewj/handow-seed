@@ -1,6 +1,6 @@
 {
     "name": "handow-seed",
-    "version": "v0.12.3",
+    "version": "v0.13.0",
     "description": "Handow seed project",
     "keywords": [ "test", "e2e", "bdd", "tdd", "uat", "e2e-test", "javascript", "test-server", "puppeteer", "selenium", "serenity", "jest", "jasmine", "handow", "chromium" ],
     "repository": {

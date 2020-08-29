@@ -14,7 +14,7 @@ Then I can see it {selector: "StageTitle"} is displayed
 When I click it {selector: "Story"}
 And I have seen it {selector: "StoryDetail"} is displayed
 # And I click it {selector: "ExpandStoryParams"}
-Then I can see it {selector: "StoryParams"} is disappeared
+Then I do not see it {selector: "StoryParams"} is displayed
 Then I can see it {selector: "StoryParams"} is displayed @skip: ("summary-story-name@h4w"==this.Story)
 @parameters: [
     {
@@ -25,14 +25,14 @@ Then I can see it {selector: "StoryParams"} is displayed @skip: ("summary-story-
     }
 ]
 
-@scenario: Open story parameters1
+@scenario: Open story parameters
 # When I click button {selector: "ParamsToggleHideButton"}
 When I click it {xpath: "Params_Toggle_Show_Button"} @skip: ("story-params-hide@h4w(1)"==this.ExpandStoryParams)
 # When I click it {selector: "ExpandPhaseParams"}
 When I click it {selector: "ExpandStoryParams"}
 # And I click button {selector: "ParamsToggleShowButton"}
 Then I can see it {selector: "StoryParams"} is displayed @skip: ("story-params-hide@h4w(1)"==this.ExpandStoryParams)
-Then I can see it {selector: "StoryParams"} is disappeared @skip: ("story-params-show@h4w(1)"==this.ExpandStoryParams)
+Then I do not see it {selector: "StoryParams"} is displayed @skip: ("story-params-show@h4w(1)"==this.ExpandStoryParams)
 @parameters: [
     {
         ExpandStoryParams: "story-params-show@h4w(1)",
@@ -52,7 +52,7 @@ Then I can see it {selector: "StoryParams"} is disappeared @skip: ("story-params
 
 @scenario: Expand a phase
 When I click it {xpath: "Access_Gallery_View_Phase_Title"}
-When I wait time {seconds: "WaitTime"} seconds
+When I wait seconds {seconds: "WaitTime"}
 Then I can see it {selector: "StepTitle"} is displayed
 @parameters: [
     {
@@ -66,7 +66,7 @@ Then I can see it {selector: "StepTitle"} is displayed
 
 @scenario: Expand the XHR testing phase
 When I click it {xpath: "Test_XHR_Phase_Title"}
-When I wait time {seconds: "WaitTime"} seconds
+When I wait seconds {seconds: "WaitTime"}
 Then I can see it {xpath: "XHRStepTitle"} is displayed
 @parameters: [
     {

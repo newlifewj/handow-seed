@@ -11,14 +11,16 @@ Then I can see it {selector: "Upload_Button"} is displayed
 }]
 
 @scenario: Choose a file with path relative with test project
-When I click it {selector: "Choose_File"} and choose the file paths {paths: "Uploading_File"}
+# When I click it {selector: "Choose_File"} and choose the files paths {paths: "Uploading_File"}
+When I click it {xpath: "Choose_File_Probe"} and choose the files paths {paths: "Uploading_File"}
 Then I can see it {selector: "File_Bar"} is showing text {text: "File_Name"}
 And I can see it {selector: "Upload_Button"} is enabled
 @parameters: [{
   Choose_File: "#upload-fake-button",
-  Uploading_File: "UploadFileDemo.txt",
+  Choose_File_Probe: "choose-files-trigger@h4w",
+  Uploading_File: "demo.txt",
   File_Bar: "uploading-file-name@h4w",
-  File_Name: "UploadFileDemo.txt",
+  File_Name: "demo.txt",
   Upload_Button: "upload-files-button@h4w"
 }]
 
@@ -30,4 +32,3 @@ Then I can see it {selector: "Message_Bar"} is showing text {text: "Upload_Succe
     Message_Bar: "#upload-message",
     Upload_Success: "The files have been uploaded successfully"
 }]
- 

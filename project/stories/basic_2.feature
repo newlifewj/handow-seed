@@ -11,7 +11,7 @@ Then I can see it {selector: "Handow_Lab_Link"} is displayed
 
 @scenario: Navigate to Handow Lab index page
 When I click it {selector: "Handow_Lab_Link"}
-And I wait time {seconds: "A_Moment"} seconds
+And I wait seconds {seconds: "A_Moment"}
 Then I can see it {selector: "Form_Demo_Link"} is showing text {text: "Form_Demo_Label"}
 And I can see it {selector: "XHR_Cookie_Demo_Link"} is showing text {text: "XHR_Cookie_Demo_Label"}
 And I can see it {selector: "Table_Demo_Link"} is showing text {text: "Table_Demo_Label"}

@@ -6,7 +6,7 @@ And I click it {selector: "Dialog_Entry"}
 Then I can see it {selector: "Prompt_Trigger"} is displayed
 @parameters: [{
   Local_Lab_Home: "http://www.handow.org/lab/",
-  Dialog_Entry: "demo-probe-dialog@h4w",
+  Dialog_Entry: 'demo-probe-dialog@h4w',
   Prompt_Trigger: "prompt-trigger@h4w"
 }]
 

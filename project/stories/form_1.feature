@@ -7,11 +7,13 @@ And I can see it {selector: "Submit_Button"} is disabled
     {
         Form_View: "#demo-form-container",
         Submit_Button: "#form-submit",
+        Handow_Form_Local: "http://localhost:3200/lab/demoform",
         Secured: false
     },
     {
         Form_View: "#demo-form-container",
         Submit_Button: "#form-submit",
+        Handow_Form_Local: "http://localhost:3200/lab/demoform",
         Secured: true
     }
 ]
@@ -69,9 +71,11 @@ Then I can see it {selector: "Submit_Button"} is disabled @skip: (!this.Secured)
 @scenario: Select level no matter secured or no-secured
 When I select option {option: "Level_Option1"} of it {selector: "Level_Select"}
 Then I can see it {selector: "Submit_Button"} is enabled
+# Then I can see it {xpath: "Submit_Button_Path"} is enabled
 @parameters: [
     {
         Level_Select: "#form-select-level",
+        Submit_Button_Path: "form-submit-button@h4w",
         Level_Option1: "1"
     }
 ]

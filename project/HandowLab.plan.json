@@ -4,7 +4,7 @@
         {
             "stage": "Preset and XHR",
             "description": "This is the first stage ...",
-            "stories": [ "xhr_cookie" ]
+            "stories": [ "xhr_cookie", "file_loading" ]
         },
         {
             "stage": "Paralle group1",

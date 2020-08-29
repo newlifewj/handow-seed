@@ -25,10 +25,10 @@ Then I can see it {xpath: "Lab_Version_Showing"} is displayed
 
 @scenario: Click button to add Jack Smth
 When I click it {selector: "Lab_Preset_Button"}
-And I set cookies {cookies: "Test_Cookies"}  to current browser instance
+And I set cookies {cookies: "Test_Cookies"}  to current page
 And I wait it {selector: "Spin"} is disappeared
 Then I can see it {xpath: "Lab_User_Added"} is displayed
-And the cookie {cookiename: "HANDOW_TOKEN"} with value {value: "TOKEN_VALUE"} available in current page
+And the cookie item {name: "HANDOW_TOKEN"} with value {value: "TOKEN_VALUE"} available in current page
 @parameters: [
     {
         Spin: "#ajax-loading-spin",
@@ -43,6 +43,7 @@ And the cookie {cookiename: "HANDOW_TOKEN"} with value {value: "TOKEN_VALUE"} av
 When I send request xhr {xhr: "XHR_Get_Version"}
 Then I received response with status {status: "HTTP200"} HTTP status
 And I received response with data {data: "Handow_Version_Data"}
+And I verify the cookies items {cookies: "HANDOW_TOKEN"} exist
 
 @scenario: XHR add Jack Smith
 When I send request xhr {xhr: "XHR_Post_User"}
