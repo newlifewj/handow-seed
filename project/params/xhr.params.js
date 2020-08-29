@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Global parameters for URLs
+ * Global parameters for HTTP and XHR
  */
 
 module.exports = {
@@ -101,13 +101,5 @@ module.exports = {
         data: {
             username: "Mark"
         }
-    },
-
-    Test_Cookies: [
-        {
-            name: "HANDOW-TEXT-TOKEN",
-            value: "A182F6B9B52BCBBD01B1702A0B0E8E61"
-        }
-    ]
-        
+    }
 };

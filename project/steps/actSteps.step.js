@@ -44,3 +44,7 @@ When("I handle the prompt by provide name {name}", async (name) => {
         throw new TypeError(`The popover is not a prompt dialog`);
     }
 })
+
+Given("I have opened url {url}", async (url) => {
+    await page.goto(url);
+});
