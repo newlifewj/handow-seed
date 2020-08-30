@@ -7,8 +7,6 @@ And I verify it {xpath: "Homepage_Image"} exist
 And I do not see it {selector: "Updated_Time"} is displayed
 @parameters: [
     {
-        Handow_Homepage: "http://www.handow.org",
-        Handow_Homepage_Local: "http://localhost:3200/",
         Handow_Lab_Link: "#handow-lab",
         Home_Page_Image: "#home-image",
         Homepage_Image: "homepage-image@h4w",

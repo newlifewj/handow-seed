@@ -1,12 +1,11 @@
 # xhr_cookie.feature
 @tags: ["xhr","cookie"]
 @scenario: Navigate to the front page of Handow Lab, verify the buttons available in view
-Given I go to url {url: "Handow_Homepage"}
+Given I go to url {url: "Handow_Lab"}
 Then I can see it {selector: "Lab_Version_Button"} is displayed
 And I can see it {selector: "Lab_Preset_Button"} is displayed
 @parameters: [
     {
-        Handow_Homepage: "http://www.handow.org/lab",
         Lab_Version_Button: "#button-lab-version",
         Lab_Preset_Button: "#button-add-jack"
     }
@@ -48,3 +47,13 @@ And I verify the cookies items {cookies: "HANDOW_TOKEN"} exist
 @scenario: XHR add Jack Smith
 When I send request xhr {xhr: "XHR_Post_User"}
 Then I received response with status {status: "HTTP201"} HTTP status
+
+@scenario: Navigate to a new view, there will be errors in this page
+When I click it {selector: "XHR_Cookie_Link"}
+Then I verify it {xpath: "XHR_Cookie_View"} exist
+@parameters: [
+    {
+        XHR_Cookie_Link: "#lab-demo-xhrcookie",
+        XHR_Cookie_View: "xhr-cookie-view@h4w"
+    }
+]
