@@ -17,6 +17,9 @@ module.exports = {
     // Add cookies info to report or not. true -- will add cookies available for current page path to each act
     cookies: true,
 
+    // Add errors happened currently to report or not. true -- Will add errors existed in current page to each act
+    pageErrors: true,
+
     // Reacting time (ms) after each Act step, default is 300.
     reactTime: 300,
 
