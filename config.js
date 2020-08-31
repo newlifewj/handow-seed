@@ -24,7 +24,7 @@ module.exports = {
     reactTime: 300,
 
     // Timeout (ms) for waiting element appear/disappear, default is 30000.
-    elementAppearTimeout: 10000,
+    elementAppearTimeout: 5000,
 
     // Coding and building base directory
     projectPath: "project",
