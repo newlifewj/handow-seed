@@ -1,9 +1,9 @@
 # Test the stage dashboard
 
 @scenario: Start enter the report page
-Given I have opened url {url: "ReportURL"}
+Given I have opened {url: "ReportURL"}
 # And I have seen it {selector: "LogoTitle"} is displayed
-Then I can see it {selector: "StageTitle"} is displayed
+Then I can see {selector: "StageTitle"} is displayed
 @parameters: [
     {
         StageTitle: 'summary-stages-title@h4w'
@@ -11,10 +11,10 @@ Then I can see it {selector: "StageTitle"} is displayed
 ]
 
 @scenario: Enter story detail view
-When I click it {selector: "Story"}
-And I have seen it {selector: "StoryDetail"} is displayed
+When I click {selector: "Story"}
+And I have seen {selector: "StoryDetail"} is displayed
 # And I click it {selector: "ExpandStoryParams"}
-Then I can see it {selector: "StoryParams"} is displayed
+Then I can see {selector: "StoryParams"} is displayed
 @parameters: [
     {
         Story: "summary-story-name@h4w",
@@ -26,11 +26,11 @@ Then I can see it {selector: "StoryParams"} is displayed
 
 @scenario: Open story parameters1
 # When I click button {selector: "ParamsToggleHideButton"}
-When I click it {xpath: "Params_Toggle_Show_Button"}
+When I click {xpath: "Params_Toggle_Show_Button"}
 # When I click it {selector: "ExpandPhaseParams"}
-And I click it {selector: "ExpandStoryParams"}
+And I click {selector: "ExpandStoryParams"}
 # And I click button {selector: "ParamsToggleShowButton"}
-Then I can see it {selector: "StoryParams"} is displayed
+Then I can see {selector: "StoryParams"} is displayed
 @parameters: [
     {
         ExpandStoryParams: "story-params-show@h4w(1)",
@@ -42,9 +42,9 @@ Then I can see it {selector: "StoryParams"} is displayed
 ]
 
 @scenario: Expand a phase
-When I click it {xpath: "Access_Gallery_View_Phase_Title"}
-When I wait seconds {seconds: "WaitTime"} @skip: ("params-show-hide-toggle@h4w('Show Parameters',1)"==this.Params_Toggle_Show_Button)
-Then I can see it {selector: "StepTitle"} is displayed
+When I click {xpath: "Access_Gallery_View_Phase_Title"}
+When I wait {seconds: "WaitTime"} @skip: ("params-show-hide-toggle@h4w('Show Parameters',1)"==this.Params_Toggle_Show_Button)
+Then I can see {selector: "StepTitle"} is displayed
 @parameters: [
     {
         # Wildcard path, wildcard element, only with probe constraint and content
@@ -56,9 +56,9 @@ Then I can see it {selector: "StepTitle"} is displayed
 ]
 
 @scenario: Expand the XHR testing phase
-When I click it {xpath: "Test_XHR_Phase_Title"}
-When I wait seconds {seconds: "WaitTime"} @skip: ("params-show-hide-toggle@h4w('Hide Parameters',1)"==this.Params_Toggle_Show_Button)
-Then I can see it {xpath: "XHRStepTitle"} is displayed
+When I click {xpath: "Test_XHR_Phase_Title"}
+When I wait {seconds: "WaitTime"} @skip: ("params-show-hide-toggle@h4w('Hide Parameters',1)"==this.Params_Toggle_Show_Button)
+Then I can see {xpath: "XHRStepTitle"} is displayed
 @parameters: [
     {
         Test_XHR_Phase_Title: "phase-title@h4w('Test XHR communications')",
@@ -68,8 +68,8 @@ Then I can see it {xpath: "XHRStepTitle"} is displayed
 ]
 
 @scenario: Open XHR record dialogue popover
-When I click it {selector: "Open_XHR_Icon"}
-Then I can see it {selector: "XHR_Detail_Panel"} is displayed
+When I click {selector: "Open_XHR_Icon"}
+Then I can see {selector: "XHR_Detail_Panel"} is displayed
 @parameters: [
     {
         Open_XHR_Icon: "open-xhr-entry@h4w",

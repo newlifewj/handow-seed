@@ -1,9 +1,9 @@
 # xhr_cookie.feature
 @tags: ["xhr","cookie"]
 @scenario: Navigate to the front page of Handow Lab, verify the buttons available in view
-Given I go to url {url: "Handow_Lab"}
-Then I can see it {selector: "Lab_Version_Button"} is displayed
-And I can see it {selector: "Lab_Preset_Button"} is displayed
+Given I go to {url: "Handow_Lab"}
+Then I can see {selector: "Lab_Version_Button"} is displayed
+And I can see {selector: "Lab_Preset_Button"} is displayed
 @parameters: [
     {
         Lab_Version_Button: "#button-lab-version",
@@ -12,9 +12,9 @@ And I can see it {selector: "Lab_Preset_Button"} is displayed
 ]
 
 @scenario: Click button get lab version
-When I click it {selector: "Lab_Version_Button"}
-And I wait it {selector: "Spin"} is disappeared
-Then I can see it {xpath: "Lab_Version_Showing"} is displayed
+When I click {selector: "Lab_Version_Button"}
+And I wait {selector: "Spin"} is disappeared
+Then I can see {xpath: "Lab_Version_Showing"} is displayed
 @parameters: [
     {
         Spin: "#ajax-loading-spin",
@@ -23,11 +23,11 @@ Then I can see it {xpath: "Lab_Version_Showing"} is displayed
 ]
 
 @scenario: Click button to add Jack Smth
-When I click it {selector: "Lab_Preset_Button"}
-And I set cookies {cookies: "Test_Cookies"}  to current page
-And I wait it {selector: "Spin"} is disappeared
-Then I can see it {xpath: "Lab_User_Added"} is displayed
-And the cookie item {name: "HANDOW_TOKEN"} with value {value: "TOKEN_VALUE"} available in current page
+When I click {selector: "Lab_Preset_Button"}
+And I set {cookies: "Test_Cookies"}  to current page
+And I wait {selector: "Spin"} is disappeared
+Then I can see {xpath: "Lab_User_Added"} is displayed
+And the cookie {name: "HANDOW_TOKEN"} with {value: "TOKEN_VALUE"} available in current page
 @parameters: [
     {
         Spin: "#ajax-loading-spin",
@@ -39,18 +39,18 @@ And the cookie item {name: "HANDOW_TOKEN"} with value {value: "TOKEN_VALUE"} ava
 
 # XHR and cookies parameters are defined in xhr.params.js globally
 @scenario: Access the GET_VERSION API and verify the Handow version property in response
-When I send request xhr {xhr: "XHR_Get_Version"}
-Then I received response with status {status: "HTTP200"} HTTP status
-And I received response with data {data: "Handow_Version_Data"}
-And I verify the cookies items {cookies: "HANDOW_TOKEN"} exist
+When I send request {xhr: "XHR_Get_Version"}
+Then I received response with {status: "HTTP200"} HTTP status
+And I received response with payload {data: "Handow_Version_Data"}
+And I verify the cookies {cookies: "HANDOW_TOKEN"} exist
 
 @scenario: XHR add Jack Smith
-When I send request xhr {xhr: "XHR_Post_User"}
-Then I received response with status {status: "HTTP201"} HTTP status
+When I send request {xhr: "XHR_Post_User"}
+Then I received response with {status: "HTTP201"} HTTP status
 
 @scenario: Navigate to a new view, there will be errors in this page
-When I click it {selector: "XHR_Cookie_Link"}
-Then I verify it {xpath: "XHR_Cookie_View"} exist
+When I click {selector: "XHR_Cookie_Link"}
+Then I verify {xpath: "XHR_Cookie_View"} exist
 @parameters: [
     {
         XHR_Cookie_Link: "#lab-demo-xhrcookie",

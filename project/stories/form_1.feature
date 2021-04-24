@@ -1,7 +1,7 @@
 @scenario: Deeplink the form view
-Given I go to url {url: "Handow_Form"}
-Then I can see it {selector: "Form_View"} is displayed
-And I can see it {selector: "Submit_Button"} is disabled
+Given I go to {url: "Handow_Form"}
+Then I can see {selector: "Form_View"} is displayed
+And I can see {selector: "Submit_Button"} is disabled
 # And I can see it {selector: "Username"} with value{value: "Username_Value"}
 @parameters: [
     {
@@ -19,8 +19,8 @@ And I can see it {selector: "Submit_Button"} is disabled
 ]
 
 @scenario: Test Username validation, the username field must be 3-12 assic characters and not a number
-When I enter value {value: "Username_Value"} to input {selector: "Username_Input"}
-Then I can see it {selector: "Validate_Error"} is displayed
+When I enter {value: "Username_Value"} to {selector: "Username_Input"}
+Then I can see {selector: "Validate_Error"} is displayed
 @parameters: [
     {
         Username_Value: "Ja",
@@ -46,8 +46,8 @@ Then I can see it {selector: "Validate_Error"} is displayed
 
 @scenario: Choose secured
 @skip: (!this.Secured)
-When I click it {selector: "Secured_Checkbox"}
-Then I can see it {selector: "Submit_Button"} is disabled
+When I click {selector: "Secured_Checkbox"}
+Then I can see {selector: "Submit_Button"} is disabled
 @parameters: [
     {
         Secured_Checkbox: "#form-checkbox-secured"
@@ -55,10 +55,10 @@ Then I can see it {selector: "Submit_Button"} is disabled
 ]
 
 @scenario: Fill form with valid Username and Email when no-secured
-When I enter value {value: "Username_Value"} to input {selector: "Username_Input"}
-And I enter value {value: "Email_Value"} to input {selector: "Email_Input"}
-Then I can see it {selector: "Submit_Button"} is enabled @skip: (this.Secured)
-Then I can see it {selector: "Submit_Button"} is disabled @skip: (!this.Secured)
+When I enter {value: "Username_Value"} to {selector: "Username_Input"}
+And I enter {value: "Email_Value"} to {selector: "Email_Input"}
+Then I can see {selector: "Submit_Button"} is enabled @skip: (this.Secured)
+Then I can see {selector: "Submit_Button"} is disabled @skip: (!this.Secured)
 @parameters: [
     {
         Username_Value: "Mark Davis",
@@ -69,8 +69,8 @@ Then I can see it {selector: "Submit_Button"} is disabled @skip: (!this.Secured)
 ]
 
 @scenario: Select level no matter secured or no-secured
-When I select option {option: "Level_Option1"} of it {selector: "Level_Select"}
-Then I can see it {selector: "Submit_Button"} is enabled
+When I select {option: "Level_Option1"} of {selector: "Level_Select"}
+Then I can see {selector: "Submit_Button"} is enabled
 # Then I can see it {xpath: "Submit_Button_Path"} is enabled
 @parameters: [
     {
@@ -81,10 +81,10 @@ Then I can see it {selector: "Submit_Button"} is enabled
 ]
 
 @scenario: Submit for and verify message
-When I click it {selector: "Submit_Button"}
-And I wait it {selector: "Spin"} is disappeared
-Then I can see it {selector: "Feedback_Message"} is showing text {text: "Success_No_Secured"} @skip: (this.Secured)
-Then I can see it {selector: "Feedback_Message"} is showing text {text: "Success_Secured"} @skip: (!this.Secured)
+When I click {selector: "Submit_Button"}
+And I wait {selector: "Spin"} is disappeared
+Then I can see {selector: "Feedback_Message"} is showing {text: "Success_No_Secured"} @skip: (this.Secured)
+Then I can see {selector: "Feedback_Message"} is showing {text: "Success_Secured"} @skip: (!this.Secured)
 @parameters: [
     {
         Spin: "#ajax-loading-spin",

@@ -1,9 +1,9 @@
 @tags: ["upload", "download"]
 @scenario: Deepllink to Lab and navigate to DemoFileLoading page
-Given I go to url {url: "Local_Lab_Home"}
+Given I go to {url: "Local_Lab_Home"}
 And I wait all pending requests resolved
-And I click it {selector: "File_Loading_Index"}
-Then I can see it {selector: "Upload_Button"} is displayed
+And I click {selector: "File_Loading_Index"}
+Then I can see {selector: "Upload_Button"} is displayed
 @parameters: [{
   Local_Lab_Home: "http://www.handow.org/lab/",
   File_Loading_Index: 'demo-probe-file@h4w',
@@ -12,9 +12,9 @@ Then I can see it {selector: "Upload_Button"} is displayed
 
 @scenario: Choose a file with path relative with test project
 # When I click it {selector: "Choose_File"} and choose the files paths {paths: "Uploading_File"}
-When I click it {xpath: "Choose_File_Probe"} and choose the files paths {paths: "Uploading_File"}
-Then I can see it {selector: "File_Bar"} is showing text {text: "File_Name"}
-And I can see it {selector: "Upload_Button"} is enabled
+When I click {xpath: "Choose_File_Probe"} and choose the files {paths: "Uploading_File"}
+Then I can see {selector: "File_Bar"} is showing {text: "File_Name"}
+And I can see {selector: "Upload_Button"} is enabled
 @parameters: [{
   Choose_File: "#upload-fake-button",
   Choose_File_Probe: "choose-files-trigger@h4w",
@@ -25,8 +25,8 @@ And I can see it {selector: "Upload_Button"} is enabled
 }]
 
 @scenario: Upload the selected file
-When I click it {selector: "Upload_Button"}
-Then I can see it {selector: "Message_Bar"} is showing text {text: "Upload_Success"}
+When I click {selector: "Upload_Button"}
+Then I can see {selector: "Message_Bar"} is showing {text: "Upload_Success"}
 @parameters: [{
     Upload_Button: "upload-files-button@h4w",
     Message_Bar: "#upload-message",

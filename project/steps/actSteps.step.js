@@ -1,36 +1,34 @@
 "use strict";
 
-/* eslint-disable no-undef */
-
-// References will inject to step contex in running time
-const browser = null;
-const page = null;
-const config = null;
 const Given = null;
 const When = null;
+const Then = null;
+const page = null;
+let config;
 
 const expect = require('expect');
 const fs = require('fs');
 const deepExtend = require('deep-extend');
+const { DH_NOT_SUITABLE_GENERATOR } = require('constants');
 
 
 When("I do nothing", async () => {
-    await page.waitFor( 100 );
+    await page.waitForTimeout( 100 );
+    
 });
-
 
 /**
  * Keep it as a custom step
  * Hard to serialize the dialog provess into steps
  * Here is an example big-step for testing prompt dialog
  */
-When("I handle the prompt by provide name {name}", async (name) => {
+When("I handle the prompt by providing {text}", async (text) => {
 
     let type;
     page.on("dialog", (dlg) => {
         type = dlg.type();
-        setTimeout( function(){ dlg.accept(name);; }, 1500);    // Add time delay for local running and watching
-        // dlg.accept(name);
+        setTimeout( function(){ dlg.accept(text);; }, 1500);    // Add time delay for local running and watching
+        // dlg.accept(text);
     });
 
     await page.waitForSelector("#prompt-trigger", { visible: true, timeout: 1000 });
@@ -43,8 +41,51 @@ When("I handle the prompt by provide name {name}", async (name) => {
     if ( "prompt" !== `${type}` ) {
         throw new TypeError(`The popover is not a prompt dialog`);
     }
-})
+});
 
-Given("I have opened url {url}", async (url) => {
+/**
+ * Compound step to handle upload a file or multiple file
+ * selector: the clicker which will open file picker
+ * path: the path of the uploading file in local file system (multiple files separated by comma)
+ * Althought "elementHandle.uploadFile(...filePaths)" is easier, but it not the real UI interaction
+ */
+/*
+When("I click it {selector} and choose the files paths {paths}", async (selector, paths) => {
+    
+    const filePaths = paths.split(",");
+
+    await page.waitForSelector(selector, { visible: true, timeout: 1000 });
+    const uploadClicker = await page.$$(selector);
+
+    const [fileChooser] = await Promise.all([
+        page.waitForFileChooser(),
+        page.evaluate( el => el.click(), uploadClicker[0] )
+    ]);
+
+    await fileChooser.accept(filePaths);
+
+    config.reactTime && await page.waitFor(config.reactTime);  
+});
+*/
+
+// -----------------------------------------------------------------
+
+// It is just an alias of "I wait it (selector) is displayed"
+Given("I have seen {selector} is displayed", async (selector) => {
+    await page.waitForSelector(selector, { visible: true, timeout: config.elementAppearTimeout });
+});
+
+Given("I have seen {xpath} is displayed", async (xpath) => {
+    await page.waitForXPath(xpath, { visible: true, timeout: config.elementAppearTimeout });
+});
+
+Given("I have opened {url}", async (url) => {
     await page.goto(url);
 });
+
+
+
+
+
+
+

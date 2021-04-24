@@ -1,10 +1,10 @@
 @tags: ["basic"]
 @scenario: Navigate to Handow Homepage
-Given I go to url {url: "Handow_Homepage"}
-Then I can see it {selector: "Handow_Lab_Link"} is displayed
+Given I go to {url: "Handow_Homepage"}
+Then I can see {selector: "Handow_Lab_Link"} is displayed
 # And I verify it {selector: "Home_Page_Image"} exist
-And I verify it {xpath: "Homepage_Image"} exist
-And I do not see it {selector: "Updated_Time"} is displayed
+And I verify {xpath: "Homepage_Image"} exist
+And I cannot see {selector: "Updated_Time"} is displayed
 @parameters: [
     {
         Handow_Lab_Link: "#handow-lab",
@@ -15,11 +15,11 @@ And I do not see it {selector: "Updated_Time"} is displayed
 ]
 
 @scenario: Navigate to Handow Lab index page
-When I click it {selector: "Handow_Lab_Link"}
-Then I can see it {selector: "Form_Demo"} is displayed
+When I click {selector: "Handow_Lab_Link"}
+Then I can see {selector: "Form_Demo"} is displayed
 # And I can see it {selector: "Index_Title"} is showing text {text: "Title_Text"}
-And I can see it {xpath: "Lab_Title"} is showing text {text: "Title_Text"}
-And I verify it {selector: "Index_Title"} contains html {html: "HTML_Snippet"}
+And I can see {xpath: "Lab_Title"} is showing {text: "Title_Text"}
+And I verify {selector: "Index_Title"} contains {html: "HTML_Snippet"}
 @parameters: [
     {
         Form_Demo: "#lab-demo-form",

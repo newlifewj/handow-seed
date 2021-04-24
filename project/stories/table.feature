@@ -1,9 +1,9 @@
 # Table.feature
 @tags: ["Table"]
 @scenario: Start from deeplink Handow Lab page
-Given I have opened url {url: "Handow_Lab"}
+Given I have opened {url: "Handow_Lab"}
 And I wait all pending requests resolved
-Then I can see it {selector: "Table_Demo_Link"} is showing text {text: "Table_Demo_Label"}
+Then I can see {selector: "Table_Demo_Link"} is showing {text: "Table_Demo_Label"}
 # Then I can see it {xpath: "Table_Demo_Probe"} is showing text {text: "Table_Demo_Label"}
 @parameters: [
     {
@@ -15,11 +15,11 @@ Then I can see it {selector: "Table_Demo_Link"} is showing text {text: "Table_De
 ]
 
 @scenario: Navigate to Table and varify users amount and specific username
-When I click it {selector: "Table_Demo_Link"}
-And I wait seconds {seconds: "A_Moment"}
-Then I can see it {selector: "User_Table"} is displayed
-And I can see number {number: "User_Quantity"} items of it {xpath: "All_Users"} exist
-And I can see it {xpath: "Mark_Galeet"} is displayed
+When I click {selector: "Table_Demo_Link"}
+And I wait {seconds: "A_Moment"}
+Then I can see {selector: "User_Table"} is displayed
+And I can see {number: "User_Quantity"} items of {xpath: "All_Users"} exist
+And I can see {xpath: "Mark_Galeet"} is displayed
 @parameters: [
     {
         A_Moment: 1,
@@ -31,8 +31,8 @@ And I can see it {xpath: "Mark_Galeet"} is displayed
 ]
 
 @scenario: Sort by level field
-When I click it {selector: "Table_Head_Level"}
-Then I can see them {xpath: "Level_Items"} sorted by order {order: "ASC_Order"}
+When I click {selector: "Table_Head_Level"}
+Then I can see {xpath: "Level_Items"} sorted by {order: "ASC_Order"}
 @parameters: [
     {
         Table_Head_Level: "#table-head-level",
@@ -42,9 +42,9 @@ Then I can see them {xpath: "Level_Items"} sorted by order {order: "ASC_Order"}
 ]
 
 @scenario: Sort by username field
-When I click it {selector: "Table_Head_Username"}
-Then I can see them {xpath: "Username_Items"} sorted by order {order: "ASC_Order"}
-And I can see them {selector: "Level_Items"} sorted by order {order: "Descending"}
+When I click {selector: "Table_Head_Username"}
+Then I can see {xpath: "Username_Items"} sorted by {order: "ASC_Order"}
+And I can see {selector: "Level_Items"} sorted by {order: "Descending"}
 @parameters: [
     {
         Table_Head_Username: "#table-head-username",

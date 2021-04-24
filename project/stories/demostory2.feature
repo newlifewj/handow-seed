@@ -1,9 +1,9 @@
 ## Test the stage dashboard
 
 @scenario: Start enter the report page
-Given I have opened url {url: "ReportURL"}
+Given I have opened {url: "ReportURL"}
 # And I have seen it {selector: "LogoTitle"} is displayed
-Then I can see it {selector: "StageTitle"} is displayed
+Then I can see {selector: "StageTitle"} is displayed
 @parameters: [
     {
         StageTitle: 'summary-stages-title@h4w'
@@ -14,9 +14,9 @@ Then I can see it {selector: "StageTitle"} is displayed
 ]
 
 @scenario: Enter story detail view
-When I click it {selector: "Story"}
-And I have seen it {selector: "StoryDetail"} is displayed
-Then I can see it {selector: "ParamsToggle"} is displayed
+When I click {selector: "Story"}
+And I have seen {selector: "StoryDetail"} is displayed
+Then I can see {selector: "ParamsToggle"} is displayed
 @parameters: [
     {
         Story: "summary-story-name@h4w",

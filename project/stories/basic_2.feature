@@ -1,8 +1,8 @@
 @tags: ["duplicated"]
 @scenario: Navigate to Handow Homepage
-Given I go to url {url: "Handow_Homepage"}
+Given I go to {url: "Handow_Homepage"}
 And I wait all pending requests resolved
-Then I can see it {selector: "Handow_Lab_Link"} is displayed
+Then I can see {selector: "Handow_Lab_Link"} is displayed
 @parameters: [
     {
         Handow_Lab_Link: "#handow-lab"
@@ -10,12 +10,12 @@ Then I can see it {selector: "Handow_Lab_Link"} is displayed
 ]
 
 @scenario: Navigate to Handow Lab index page
-When I click it {selector: "Handow_Lab_Link"}
-And I wait seconds {seconds: "A_Moment"}
-Then I can see it {selector: "Form_Demo_Link"} is showing text {text: "Form_Demo_Label"}
-And I can see it {selector: "XHR_Cookie_Demo_Link"} is showing text {text: "XHR_Cookie_Demo_Label"}
-And I can see it {selector: "Table_Demo_Link"} is showing text {text: "Table_Demo_Label"}
-And I can see it {selector: "Probe_Trace_Demo_Link"} is showing text {text: "Probe_Trace_Demo_Label"}
+When I click {selector: "Handow_Lab_Link"}
+And I wait {seconds: "A_Moment"}
+Then I can see {selector: "Form_Demo_Link"} is showing {text: "Form_Demo_Label"}
+And I can see {selector: "XHR_Cookie_Demo_Link"} is showing {text: "XHR_Cookie_Demo_Label"}
+And I can see {selector: "Table_Demo_Link"} is showing {text: "Table_Demo_Label"}
+And I can see {selector: "Probe_Trace_Demo_Link"} is showing {text: "Probe_Trace_Demo_Label"}
 @parameters: [
     {
         A_Moment: 1,
