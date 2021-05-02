@@ -20,7 +20,9 @@ The project is a Handow implementation plus a comprehensive web server and power
 
 ### Install
 
-Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine. Install dependencies in the project root:
+Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, version >=12.0.0 and <15.0.0 is recommended).
+
+Install dependencies in the project root:
 
 ```
 $ npm install

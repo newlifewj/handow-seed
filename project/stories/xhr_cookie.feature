@@ -23,7 +23,7 @@ Then I can see {xpath: "Lab_Version_Showing"} is displayed
 ]
 
 @scenario: Click button to add Jack Smth
-When I click {selector: "Lab_Preset_Button"}
+When I click {selector: "Lab_Preset_Button"} and watch {xhr: "Post_Reset_User_XHR"}
 And I set {cookies: "Test_Cookies"}  to current page
 And I wait {selector: "Spin"} is disappeared
 Then I can see {xpath: "Lab_User_Added"} is displayed
@@ -49,7 +49,7 @@ When I send request {xhr: "XHR_Post_User"}
 Then I received response with {status: "HTTP201"} HTTP status
 
 @scenario: Navigate to a new view, there will be errors in this page
-When I click {selector: "XHR_Cookie_Link"}
+When I click {selector: "XHR_Cookie_Link"} and watch {xhr: "More_Doc_XHR"}
 Then I verify {xpath: "XHR_Cookie_View"} exist
 @parameters: [
     {

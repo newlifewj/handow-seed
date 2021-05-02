@@ -14,6 +14,21 @@ module.exports = {
     HTTP500: 500,
     // It is a axios config object, consumed by axios.request(config) API
     // https://github.com/axios/axios
+    Get_Lab_Version_XHR: {
+        method: "GET", 
+        url: "/version.json"
+    },
+
+    Post_Reset_User_XHR: {
+        method: "POST",
+        url: "reqres.in/api/users"
+    },
+
+    More_Doc_XHR: {
+        method: "GET",
+        url: "/documents/Not_Exist"
+    },
+
     GetVersionAPI: {
         method: "GET",
         url: "/info",
@@ -87,6 +102,11 @@ module.exports = {
         headers: {
             'X-Requested-With': 'XMLHttpRequest'
         }
+    },
+
+    XHR_Doc_Getting_Start: {
+        method: "GET",
+        url: "/documents/Getting_Start.md",
     },
 
     WrongURLResponse: {
