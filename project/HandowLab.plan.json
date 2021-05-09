@@ -9,7 +9,7 @@
         {
             "stage": "Paralle group1",
             "description": "This is the 2nd stage to verify ...",
-            "stories": [ "property_keyboard", "local_nav", "dialog", "form_1", "table" ]
+            "stories": [ "property_keyboard", "form_1", "local_nav", "dialog", "table" ]
         },
         {
             "stage": "Paralle group2",
@@ -20,6 +20,7 @@
     "config": {
         "consoleOutput": "story",
         "outputSkipInfo": false,
+        "browserSessionScope": "plan",
         "newIncognitoContext": true,
         "headlessChromium": true,
         "workers": 3,

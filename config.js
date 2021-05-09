@@ -45,6 +45,8 @@ module.exports = {
 
     headlessChromium: false,
 
+    browserSessionScope: "plan",
+
     newIncognitoContext: false,
 
     // Timeout (ms) for waiting xhr call response, default is 30000.

@@ -1,6 +1,6 @@
 {
     "name": "handow-seed",
-    "version": "v0.17.0",
+    "version": "v0.18.0",
     "description": "Handow seed project",
     "keywords": [
         "test",
@@ -36,7 +36,6 @@
         "HandowLab": "handow --buildstep && handow --plan project/HandowLab",
         "buildStep": "handow --buildstep",
         "parseStory": "handow --parsestory project/stories/table.feature",
-        "basic_1": "handow --story --project/stories/basic_1.feature",
         "basic_2": "handow --story --project/stories/basic_2.feature",
         "form_1": "handow --buildstep && handow --story project/stories/form_1.feature",
         "table": "handow --buildstep && handow --story project/stories/table.feature",
