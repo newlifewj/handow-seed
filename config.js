@@ -21,7 +21,10 @@ module.exports = {
     pageErrors: true,
 
     // Reacting time (ms) after each Act step, default is 300.
-    reactTime: 300,
+    reactTime: 500,
+
+    // Wait all XHR resolved after each action step or not, default is true - resolve all XHR after each action before taking screenshot. 
+    actResolveXHR: true,
 
     // Timeout (ms) for waiting element appear/disappear, default is 30000.
     elementAppearTimeout: 5000,

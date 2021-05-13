@@ -21,7 +21,7 @@
         "consoleOutput": "story",
         "outputSkipInfo": false,
         "browserSessionScope": "plan",
-        "newIncognitoContext": true,
+        "newIncognitoContext": false,
         "headlessChromium": true,
         "workers": 3,
         "saveJsonReport": false
