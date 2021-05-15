@@ -16,7 +16,7 @@ When I enter {value: "Example_Text"} to {selector: "Demo_Textarea"}
 And I focus on {selector: "Demo_Textarea"}
 And I press keyboard {key: "Enter_Key"}
 Then I can see {selector: "Success_Message"} is displayed
-And I cannot see {selector: "Workspace_Clean"} is displayed
+And I cannot see {selector: "Workspace_Clean"} is visible
 # This step will fail because we set a bug in UI trim() the input
 And I can see the input {selector: "Demo_Textarea"} value equals {text: "Box_Content"}
 @parameters: [{
@@ -45,7 +45,7 @@ And I verify the active style {name: "Font_Size"} of {selector: "Demo_Textarea"}
 
 @scenario: Clear textarea and message by keyboard shotcut
 When I press keyboard shotcuts {keys: "Shotcut_Clear"}
-Then I cannot see {selector: "Success_Message"} is displayed
+Then I cannot see {selector: "Success_Message"} is visible
 And I can see {selector: "Workspace_Clean"} is displayed
 And I can see the input {selector: "Demo_Textarea"} value equals {text: "Box_Content"}
 # And I can see the input element {xpath: "Demo_Textarea_Path"} value is text {text: "Box_Content"}

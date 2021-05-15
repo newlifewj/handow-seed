@@ -27,13 +27,13 @@ When I click {selector: "Lab_Preset_Button"} and watch {xhr: "Post_Reset_User_XH
 And I set {cookies: "Test_Cookies"}  to current page
 And I wait {selector: "Spin"} is disappeared
 Then I can see {xpath: "Lab_User_Added"} is displayed
-And the cookie {name: "HANDOW_TOKEN"} with {value: "TOKEN_VALUE"} available in current page
+And the cookie {name: "Handow_Token_Name"} with {value: "Handow_Token_Value"} available in current page
 @parameters: [
     {
         Spin: "#ajax-loading-spin",
         Lab_User_Added: "message@h4w('New user (Jack Smith) has been added')",
-        HANDOW_TOKEN: "HANDOW-TEXT-TOKEN",
-        TOKEN_VALUE: "A182F6B9B52BCBBD01B1702A0B0E8E61"
+        Handow_Token_Name: "HANDOW-TEXT-TOKEN",
+        Handow_Token_Value: "A182F6B9B52BCBBD01B1702A0B0E8E61"
     }
 ]
 
@@ -42,7 +42,13 @@ And the cookie {name: "HANDOW_TOKEN"} with {value: "TOKEN_VALUE"} available in c
 When I send request {xhr: "XHR_Get_Version"}
 Then I received response with {status: "HTTP200"} HTTP status
 And I received response with payload {data: "Handow_Version_Data"}
-And I verify the cookies {cookies: "HANDOW_TOKEN"} exist
+And I verify the cookies {names: "Handow_Token_Name"} exist
+@parameters: [
+    {
+        Handow_Token_Name: "HANDOW-TEXT-TOKEN"
+    }
+]
+
 
 @scenario: XHR add Jack Smith
 When I send request {xhr: "XHR_Post_User"}
