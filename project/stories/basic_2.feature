@@ -2,7 +2,7 @@
 @scenario: Navigate to Handow Homepage
 Given I go to {url: "Handow_Homepage"}
 And I wait all pending requests resolved
-Then I can see {selector: "Handow_Lab_Link"} is displayed
+Then I can see {selector: "Handow_Lab_Link"} presenting
 @parameters: [
     {
         Handow_Lab_Link: "#handow-lab"

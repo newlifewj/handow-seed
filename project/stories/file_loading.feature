@@ -3,7 +3,7 @@
 Given I go to {url: "Local_Lab_Home"}
 And I wait all pending requests resolved
 And I click {selector: "File_Loading_Index"}
-Then I can see {selector: "Upload_Button"} is displayed
+Then I can see {selector: "Upload_Button"} presenting
 @parameters: [{
   Local_Lab_Home: "http://www.handow.org/lab/",
   File_Loading_Index: 'demo-probe-file@h4w',

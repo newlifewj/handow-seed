@@ -68,17 +68,6 @@ When("I click it {selector} and choose the files paths {paths}", async (selector
 });
 */
 
-// -----------------------------------------------------------------
-
-// It is just an alias of "I wait it (selector) is displayed"
-Given("I have seen {selector} is displayed", async (selector) => {
-    await page.waitForSelector(selector, { visible: true, timeout: config.elementAppearTimeout });
-});
-
-Given("I have seen {xpath} is displayed", async (xpath) => {
-    await page.waitForXPath(xpath, { visible: true, timeout: config.elementAppearTimeout });
-});
-
 Given("I have opened {url}", async (url) => {
     await page.goto(url);
 });

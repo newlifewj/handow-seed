@@ -1,7 +1,7 @@
 @scenario: Deeplink the form view
 Given I go to {url: "Handow_Form"}
-Then I can see {selector: "Form_View"} is displayed
-And I can see {selector: "Submit_Button"} is disabled
+Then I can see {selector: "Form_View"} presenting
+And I can see {selector: "Submit_Button"} presenting
 # And I can see it {selector: "Username"} with value{value: "Username_Value"}
 @parameters: [
     {
@@ -20,7 +20,7 @@ And I can see {selector: "Submit_Button"} is disabled
 
 @scenario: Test Username validation, the username field must be 3-12 assic characters and not a number
 When I enter {value: "Username_Value"} to {selector: "Username_Input"}
-Then I can see {selector: "Validate_Error"} is displayed
+Then I can see {selector: "Validate_Error"} presenting  @skip: (this.Secured)
 @parameters: [
     {
         Username_Value: "Ja",

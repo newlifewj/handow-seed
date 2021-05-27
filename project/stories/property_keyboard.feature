@@ -3,7 +3,7 @@
 Given I go to {url: "Handow_Lab"}
 And I wait all pending requests resolved
 And I click {selector: "Props_Keyboard_Entry"}
-Then I can see {selector: "Demo_Textarea"} is displayed
+Then I can see {selector: "Demo_Textarea"} presenting
 @parameters: [{
   Handow_Lab_Local: "http://localhost:3200/lab/",
   Props_Keyboard_Entry: 'demo-probe-propskeys@h4w',
@@ -15,8 +15,8 @@ Then I can see {selector: "Demo_Textarea"} is displayed
 When I enter {value: "Example_Text"} to {selector: "Demo_Textarea"}
 And I focus on {selector: "Demo_Textarea"}
 And I press keyboard {key: "Enter_Key"}
-Then I can see {selector: "Success_Message"} is displayed
-And I cannot see {selector: "Workspace_Clean"} is visible
+Then I can see {selector: "Success_Message"} presenting
+And I cannot see {selector: "Workspace_Clean"}
 # This step will fail because we set a bug in UI trim() the input
 And I can see the input {selector: "Demo_Textarea"} value equals {text: "Box_Content"}
 @parameters: [{
@@ -45,8 +45,8 @@ And I verify the active style {name: "Font_Size"} of {selector: "Demo_Textarea"}
 
 @scenario: Clear textarea and message by keyboard shotcut
 When I press keyboard shotcuts {keys: "Shotcut_Clear"}
-Then I cannot see {selector: "Success_Message"} is visible
-And I can see {selector: "Workspace_Clean"} is displayed
+Then I cannot see {selector: "Success_Message"}
+And I can see {selector: "Workspace_Clean"} presenting
 And I can see the input {selector: "Demo_Textarea"} value equals {text: "Box_Content"}
 # And I can see the input element {xpath: "Demo_Textarea_Path"} value is text {text: "Box_Content"}
 @parameters: [{

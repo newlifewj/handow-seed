@@ -9,7 +9,6 @@
     "config": {
         "consoleOutput": "story",
         "outputSkipInfo": false,
-        "newIncognitoContext": true,
         "headlessChromium": true,
         "workers": 3,
         "saveJsonReport": false

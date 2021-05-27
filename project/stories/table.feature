@@ -17,9 +17,9 @@ Then I can see {selector: "Table_Demo_Link"} is showing {text: "Table_Demo_Label
 @scenario: Navigate to Table and varify users amount and specific username
 When I click {selector: "Table_Demo_Link"}
 And I wait {seconds: "A_Moment"}
-Then I can see {selector: "User_Table"} is displayed
+Then I can see {selector: "User_Table"} presenting
 And I can see {number: "User_Quantity"} items of {xpath: "All_Users"} exist
-And I can see {xpath: "Mark_Galeet"} is displayed
+And I can see {xpath: "Mark_Galeet"} presenting
 @parameters: [
     {
         A_Moment: 1,

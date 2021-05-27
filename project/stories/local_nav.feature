@@ -2,7 +2,7 @@
 @scenario: Go to Handow.org homepage
 Given I go to {url: "Handow_Home"}
 And I wait all pending requests resolved
-Then I can see {selector: "Handow_Lab_Link"} is displayed
+Then I can see {selector: "Handow_Lab_Link"} presenting
 @parameters: [{
   Handow_Home: "http://www.handow.org/",
   Handow_Lab_Link: "#handow-lab"
@@ -26,7 +26,7 @@ Then I can see the new window {url: "SHM_Live_Demo"} is opened
 
 @scenario: Navigate to Handow Lab index page
 When I click {selector: "Handow_Lab_Link"}
-Then I can see {selector: "Form_Demo"} is displayed
+Then I can see {selector: "Form_Demo"} presenting
 @parameters: [{
     Form_Demo: "#lab-demo-form"
 }]

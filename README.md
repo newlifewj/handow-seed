@@ -124,3 +124,5 @@ run a plan and generate report
 [Handow Site](http://www.handow.org)
 
 [The test target web app in demo](http://www.handow.org/lab)
+
+> If you are sure to run test with SHM server on your local Chrome, please set the 'headlessChromium' filed in _shmSetting.json_ to be **false** temporarily. 

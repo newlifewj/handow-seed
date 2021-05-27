@@ -2,8 +2,8 @@
 @tags: ["xhr","cookie"]
 @scenario: Navigate to the front page of Handow Lab, verify the buttons available in view
 Given I go to {url: "Handow_Lab"}
-Then I can see {selector: "Lab_Version_Button"} is displayed
-And I can see {selector: "Lab_Preset_Button"} is displayed
+Then I can see {selector: "Lab_Version_Button"} presenting
+And I can see {selector: "Lab_Preset_Button"} presenting
 @parameters: [
     {
         Lab_Version_Button: "#button-lab-version",
@@ -14,7 +14,7 @@ And I can see {selector: "Lab_Preset_Button"} is displayed
 @scenario: Click button get lab version
 When I click {selector: "Lab_Version_Button"}
 And I wait {selector: "Spin"} is disappeared
-Then I can see {xpath: "Lab_Version_Showing"} is displayed
+Then I can see {xpath: "Lab_Version_Showing"} presenting
 @parameters: [
     {
         Spin: "#ajax-loading-spin",
@@ -26,7 +26,7 @@ Then I can see {xpath: "Lab_Version_Showing"} is displayed
 When I click {selector: "Lab_Preset_Button"} and watch {xhr: "Post_Reset_User_XHR"}
 And I set {cookies: "Test_Cookies"}  to current page
 And I wait {selector: "Spin"} is disappeared
-Then I can see {xpath: "Lab_User_Added"} is displayed
+Then I can see {xpath: "Lab_User_Added"} presenting
 And the cookie {name: "Handow_Token_Name"} with {value: "Handow_Token_Value"} available in current page
 @parameters: [
     {
