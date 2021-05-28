@@ -14,6 +14,7 @@
         },
         {
             "stage": "Paralle group2",
+            "newBrowserSession": true,
             "description": "This is the 3nd stage to verify ...",
             "stories": [ "basic_2", "xhr_cookie" ]
         }

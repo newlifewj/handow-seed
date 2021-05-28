@@ -20,7 +20,7 @@ And I can see {selector: "Submit_Button"} presenting
 
 @scenario: Test Username validation, the username field must be 3-12 assic characters and not a number
 When I enter {value: "Username_Value"} to {selector: "Username_Input"}
-Then I can see {selector: "Validate_Error"} presenting  @skip: (this.Secured)
+Then I can see {selector: "Validate_Error"} presenting
 @parameters: [
     {
         Username_Value: "Ja",

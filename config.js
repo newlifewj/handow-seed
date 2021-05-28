@@ -27,10 +27,10 @@ module.exports = {
     actResolveXHR: true,
 
     // Timeout (ms) for waiting element appear/disappear, default is 30000.
-    elementAppearTimeout: 10000,
+    elementAppearTimeout: 5000,
 
     // Timeout for verify element nonexistent, default is 2000.
-    elementAbsentTimeout: 10000,
+    elementAbsentTimeout: 5000,
 
     // Coding and building base directory
     projectPath: "project",
