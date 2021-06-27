@@ -121,5 +121,16 @@ module.exports = {
         data: {
             username: "Mark"
         }
+    },
+    
+    Get_SHM_Config: {
+        method: "GET",
+        url: "/api/shm"
+    },
+    
+    SHM_Info: {
+        method: "GET",
+        url: "/api/info"
     }
+    
 };

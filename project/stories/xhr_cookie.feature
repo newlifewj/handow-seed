@@ -2,8 +2,8 @@
 @tags: ["xhr","cookie"]
 @scenario: Navigate to the front page of Handow Lab, verify the buttons available in view
 Given I go to {url: "Handow_Lab"}
-Then I can see {selector: "Lab_Version_Button"} presenting
-And I can see {selector: "Lab_Preset_Button"} presenting
+Then I can see {selector: "Lab_Version_Button"} presented
+And I can see {selector: "Lab_Preset_Button"} presented
 @parameters: [
     {
         Lab_Version_Button: "#button-lab-version",
@@ -13,8 +13,8 @@ And I can see {selector: "Lab_Preset_Button"} presenting
 
 @scenario: Click button get lab version
 When I click {selector: "Lab_Version_Button"}
-And I wait {selector: "Spin"} is disappeared
-Then I can see {xpath: "Lab_Version_Showing"} presenting
+And I wait {selector: "Spin"} disappeared
+Then I can see {selector: "Lab_Version_Showing"} presented
 @parameters: [
     {
         Spin: "#ajax-loading-spin",
@@ -24,9 +24,9 @@ Then I can see {xpath: "Lab_Version_Showing"} presenting
 
 @scenario: Click button to add Jack Smth
 When I click {selector: "Lab_Preset_Button"} and watch {xhr: "Post_Reset_User_XHR"}
-And I set {cookies: "Test_Cookies"}  to current page
-And I wait {selector: "Spin"} is disappeared
-Then I can see {xpath: "Lab_User_Added"} presenting
+And I set {cookies: "Test_Cookies"}  to browser context
+And I wait {selector: "Spin"} disappeared
+Then I can see {selector: "Lab_User_Added"} presented
 And the cookie {name: "Handow_Token_Name"} with {value: "Handow_Token_Value"} available in current page
 @parameters: [
     {
@@ -42,7 +42,7 @@ And the cookie {name: "Handow_Token_Name"} with {value: "Handow_Token_Value"} av
 When I send request {xhr: "XHR_Get_Version"}
 Then I received response with {status: "HTTP200"} HTTP status
 And I received response with payload {data: "Handow_Version_Data"}
-And I verify the cookies {names: "Handow_Token_Name"} exist
+And I verify the cookies {names: "Handow_Token_Name"} existed
 @parameters: [
     {
         Handow_Token_Name: "HANDOW-TEXT-TOKEN"
@@ -56,7 +56,7 @@ Then I received response with {status: "HTTP201"} HTTP status
 
 @scenario: Navigate to a new view, there will be errors in this page
 When I click {selector: "XHR_Cookie_Link"} and watch {xhr: "More_Doc_XHR"}
-Then I verify {xpath: "XHR_Cookie_View"} exist
+Then I verify {selector: "XHR_Cookie_View"} existed
 @parameters: [
     {
         XHR_Cookie_Link: "#lab-demo-xhrcookie",

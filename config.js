@@ -24,16 +24,21 @@ module.exports = {
     reactTime: 500,
 
     // Wait all XHR resolved after each action step or not, default is true - resolve all XHR after each action before taking screenshot. 
-    actResolveXHR: true,
+    handlePendingXHR: true,
 
     // Timeout (ms) for waiting element appear/disappear, default is 30000.
-    elementAppearTimeout: 5000,
+    elementAppearTimeout: 10000,
 
-    // Timeout for verify element nonexistent, default is 2000.
-    elementAbsentTimeout: 5000,
+    elementDisappearTimeout: 5000,
+
+    localRender: true,
+
+    localAutoRender: true,
 
     // Coding and building base directory
     projectPath: "project",
+
+    pwtAPI: "chromium",
 
     storiesPath: "project/stories",
 
@@ -42,19 +47,20 @@ module.exports = {
 
     reportPath: "records",
 
-    // Archive stack length, default is false - no archive stack
     autoArchive: 100,
 
     consoleOutput: "step",
 
     outputSkipInfo: true,
 
-    headlessChromium: false,
+    headless: false,
 
-    browserSessionScope: "plan",
-
+    browserSessionScope: "plan", 
+    
     // Timeout (ms) for waiting xhr call response, default is 30000.
     xhrResponseTimeout: 10000,
 
-    globalParams: 'project/params'
+    globalParams: 'project/params',
+
+    runningException: "continue"
 };

@@ -4,26 +4,29 @@
         {
             "stage": "Preset and XHR",
             "description": "This is the first stage ...",
-            "stories": [ "xhr_cookie", "file_loading", "document" ]
+            "stories": [ "xhr_cookie", "file_loading" ]
         },
         {
             "stage": "Paralle group1",
             "description": "This is the 2nd stage to verify ...",
             "stories": [ "property_keyboard", "form_1", "local_nav", "dialog", "table" ],
-            "params": {}
+            "params": {
+              "Skip_Form": false
+            }
         },
         {
             "stage": "Paralle group2",
             "newBrowserSession": true,
             "description": "This is the 3nd stage to verify ...",
-            "stories": [ "basic_2", "xhr_cookie" ]
+            "stories": [ "basic_2", "xhr_cookie", "document" ]
         }
     ],
     "config": {
         "consoleOutput": "story",
         "outputSkipInfo": false,
+        "pwtAPI": "firefox",
         "browserSessionScope": "plan",
-        "headlessChromium": true,
+        "headless": true,
         "workers": 3,
         "saveJsonReport": false
     }
