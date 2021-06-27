@@ -11,6 +11,7 @@
     "shmToken": "df343#1$2321",
     "loopSchedule": "HandowLab,FormStoryPlan,XHRStoryPlan",
     "autoShowReport": false,
+    "startPop": false,
     "schedules": [
         {
             "plans": "HandowLab,FormStoryPlan",

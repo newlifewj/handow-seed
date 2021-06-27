@@ -5,5 +5,5 @@
  */
 module.exports = {
     App_Credential_File: "AppTest1.credential",
-    App_Credential_File_Path: "/home/newli/Users/Downloads"
+    App_Credential_File_Path: "/home/foo-user/Downloads"
 };
