@@ -37,9 +37,14 @@
         }
     ],
     "hdwConfig": {
-        "consoleOutput": "none",
-        "localRender": false,
+        "consoleOutput": "story",
+	    "localRender": false,
         "localAutoRender": false,
-        "headlessChromium": true
+        "outputSkipInfo": false,
+        "pwtAPI": "chromium",
+        "browserSessionScope": "plan",
+        "headless": true,
+        "workers": 3,
+        "saveJsonReport": false
     }
 }

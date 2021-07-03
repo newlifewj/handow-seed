@@ -2,9 +2,9 @@
 
 Clone the *handow-seed* project to create a full-featured E2E test application. [Living Demo](http://demo.shm.handow.org/reports)
 
-+ The test engine is driven by **[Playwright](https://playwright.dev/)**
++ Test engine is driven by **[Playwright](https://playwright.dev/)**
 + Built-in test steps library
-+ The test server with management UI and reports renderers
++ Test server (SHM) with management UI and reports renderers
 + Demos
 
 Then developers just need add new test stories, plans and run the E2E test locally or deploy the test server to cloud.
@@ -20,6 +20,7 @@ Install dependencies in the project root:
 ```
 $ npm install
 ```
+> Run command with 'sudo' in Linux machine, e.g., 'sudo npm instal'.
 
 > Installation need minutes because the Chromium, Firefox and Webkit browsers are instantiated to your local machine.
 
@@ -28,6 +29,15 @@ Then verify the E2E application by launching the test server locally:
 ```bash
 $ npm start
 ```
+
+The SHM UI is opened automatically by the default browser of current machine, users can investigate more details by naviagting to differnt dashboards. [Getting Start](https://github.com/newlifewj/handow-seed/wiki/Getting-Start)
+
+> The SHM UI is opened with _http://localhost:3333_ by default, force reload it if it is a blank view.
+
+
+## Resources
+
+[Documentation](https://github.com/newlifewj/handow-seed/wiki)
 
 The Handow test engine project on Github [handow](https://github.com/newlifewj/handow)
 

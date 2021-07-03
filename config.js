@@ -53,7 +53,7 @@ module.exports = {
 
     outputSkipInfo: true,
 
-    headless: false,
+    headless: true,
 
     browserSessionScope: "plan", 
     
