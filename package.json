@@ -1,6 +1,6 @@
 {
     "name": "handow-seed",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Handow seed project",
     "keywords": [
         "test",
@@ -9,7 +9,7 @@
         "uat",
         "e2e-test",
         "javascript",
-        "test-server",
+        "handow",
         "playwright",
         "chromium",
         "firefox",
@@ -23,6 +23,10 @@
     "license": "MIT",
     "engines": {
         "node": ">=12 <15"
+    },
+    "_vscode": {
+        "customStepsPath": "project/steps",
+        "globalParamsPath": "project/params"
     },
     "scripts": {
         "start": "cross-env NODE_ENV=development SHM_MODE=public OPEN_BROWSER=true handow-shm",

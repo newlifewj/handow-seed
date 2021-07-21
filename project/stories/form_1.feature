@@ -22,6 +22,7 @@ And I can see {selector: "Submit_Button"} presented
 @scenario: Test Username validation, the username field must be 3-12 assic characters and not a number
 When I enter {value: "Username_Value"} to {selector: "Username_Input"}
 Then I can see {selector: "Validate_Error"} presented @skip: (this.Force_Correct4)
+And I am okay @skip: (this.Username_Value==="Jack 12345 Smith")
 @parameters: [
     {
         Username_Value: "Ja",
@@ -78,12 +79,12 @@ Then I can see {selector: "Submit_Button"} is enabled
     }
 ]
 
-@scenario: Submit for and verify message
+@scenario: Submit the form and verify message in different mode
 @skip: (this.Skip_Form)
 When I click {selector: "Submit_Button"}
 And I wait {selector: "Spin"} disappeared
 Then I can see {selector: "Feedback_Message"} showing {text: "Success_No_Secured"} @skip: (this.Secured)
-Then I can see {selector: "Feedback_Message"} showing {text: "Success_Secured"} @skip: (!this.Secured)
+And I can see {selector: "Feedback_Message"} showing {text: "Success_Secured"} @skip: (!this.Secured)
 @parameters: [
     {
         Spin: "#ajax-loading-spin",

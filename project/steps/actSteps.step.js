@@ -1,16 +1,10 @@
 "use strict";
 
-const Given = null;
-const When = null;
-const Then = null;
-const page = null;
-let config;
+/* These keywords and varible are injected by build engine */
+let Given, When, browser, page, config;
 
-const expect = require('expect');
+/* Import additional dependencies, e.g. */
 const fs = require('fs');
-const deepExtend = require('deep-extend');
-const { DH_NOT_SUITABLE_GENERATOR } = require('constants');
-
 
 When("I do nothing", async () => {
     await page.waitForTimeout( 100 );
@@ -43,38 +37,7 @@ When("I handle the prompt by providing {text}", async (text) => {
     }
 });
 
-/**
- * Compound step to handle upload a file or multiple file
- * selector: the clicker which will open file picker
- * path: the path of the uploading file in local file system (multiple files separated by comma)
- * Althought "elementHandle.uploadFile(...filePaths)" is easier, but it not the real UI interaction
- */
-/*
-When("I click it {selector} and choose the files paths {paths}", async (selector, paths) => {
-    
-    const filePaths = paths.split(",");
-
-    await page.waitForSelector(selector, { visible: true, timeout: 1000 });
-    const uploadClicker = await page.$$(selector);
-
-    const [fileChooser] = await Promise.all([
-        page.waitForFileChooser(),
-        page.evaluate( el => el.click(), uploadClicker[0] )
-    ]);
-
-    await fileChooser.accept(filePaths);
-
-    config.reactTime && await page.waitFor(config.reactTime);  
-});
-*/
-
 Given("I have opened {url}", async (url) => {
     await page.goto(url);
 });
-
-
-
-
-
-
 

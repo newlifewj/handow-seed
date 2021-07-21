@@ -4,16 +4,18 @@ Clone the *handow-seed* project to create a full-featured E2E test application. 
 
 + Test engine is driven by **[Playwright](https://playwright.dev/)**
 + Built-in test steps library
-+ Test server (SHM) with management UI and reports renderers
++ Test server (SHM) with management UI, reports renderers and history archive
 + Demos
 
-Then developers just need add new test stories, plans and run the E2E test locally or deploy the test server to cloud.
+Developers just need add new test stories, plans and run the E2E test locally or deploy it to cloud.
 
 [More details](https://github.com/newlifewj/handow-seed/wiki)
 
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Handow story syntax, completion, reference and validation support on IDE [VSCODE Extension](https://github.com/newlifewj/handow-seed/wiki/IDE-Support)
+
 ## Install
 
-Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, versions >=12.0.0 && <15.0.0' are recommended).
+Make sure [Node.js](https://nodejs.org/en/download/) has been installed to your local machine, versions **">=12.0.0 && <15.0.0"** are recommended).
 
 Install dependencies in the project root:
 
