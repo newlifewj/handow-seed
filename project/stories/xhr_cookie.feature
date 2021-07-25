@@ -24,7 +24,7 @@ Then I can see {selector: "Lab_Version_Showing"} presented
 
 @scenario: Click button to add Jack Smth
 When I click {selector: "Lab_Preset_Button"} and watch {xhr: "Post_Reset_User_XHR"}
-And I set {cookies: "Test_Cookies"}  to browser context
+And I set {cookies: "Test_Cookies"} to browser context
 And I wait {selector: "Spin"} disappeared
 Then I can see {selector: "Lab_User_Added"} presented
 And the cookie {name: "Handow_Token_Name"} with {value: "Handow_Token_Value"} available in current page
