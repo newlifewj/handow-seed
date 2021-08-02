@@ -24,7 +24,7 @@
     "config": {
         "consoleOutput": "story",
         "outputSkipInfo": false,
-        "pwtAPI": "firefox",
+        "pwtAPI": "chromium",
         "browserSessionScope": "plan",
         "headless": true,
         "workers": 3,

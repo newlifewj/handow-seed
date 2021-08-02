@@ -18,7 +18,7 @@ And I can see {selector: "Upload_Button"} is enabled
 @parameters: [{
   Choose_File: "#upload-fake-button",
   Choose_File_Probe: "choose-files-trigger@h4w",
-  Uploading_File: "C:\\handow\\handow-project\\demo.txt",
+  Uploading_File: "./demo.txt",
   File_Bar: "uploading-file-name@h4w",
   File_Name: "demo.txt",
   Upload_Button: "upload-files-button@h4w"
